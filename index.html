@@ -8,8 +8,9 @@
 </head>
 <body>
 
-<nav>
-  <a class="nav-logo" href="index.html">finnian day</a>
+<!-- NAV overlaid on hero -->
+<nav id="main-nav">
+  <a class="nav-logo" href="index.html">Finnian Day</a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="research.html">Research</a></li>
@@ -20,119 +21,138 @@
   </ul>
 </nav>
 
-<div class="wrap">
-
-  <div class="hero">
-    <h1 class="hero-name">Finnian <em>Day</em></h1>
-    <div class="hero-role">PhD Student · Interdisciplinary Engineering · Northeastern University</div>
-    <p class="hero-bio">
-      I study the physics of polymer systems during composite manufacturing — building predictive models for diffusion, healing, and laser–material interactions to enable next-generation aerospace structures. Affiliated with NASA Langley Research Center's Advanced Materials &amp; Processing Branch.
-    </p>
-    <div class="hero-meta">
-      <span>Portland, ME</span>
-      <a href="mailto:day.fi@northeastern.edu">day.fi@northeastern.edu</a>
-      <a href="https://linkedin.com/in/finnian-day/" target="_blank">LinkedIn</a>
-      <a href="cv.html">Curriculum Vitae</a>
-    </div>
+<!-- HERO — swap comment to use a real photo -->
+<div class="hero">
+  <img class="hero-img" src="Images/banner.jpg" alt="">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <div class="hero-name">Finnian Day</div>
+    <div class="hero-tagline">PhD Student · Northeastern University · Interdisciplinary Engineering </div>
   </div>
-
-  <div class="section">
-    <div class="section-label">About</div>
-    <div class="two-col">
-      <div class="prose">
-        <p>I'm a first-year PhD student at Northeastern University, where my research sits at the intersection of aerospace materials science, advanced manufacturing, and computational modeling. My current work focuses on how miscible polymers interdiffuse at interfaces — a fundamental process governing bond strength in laser-assisted automated fiber placement (AFP).</p>
-        <p>Before my PhD, I completed a BS in Aerospace Engineering at Virginia Tech (May 2025) and spent three consecutive terms at NASA Langley's Advanced Materials &amp; Processing Branch across three research projects: SUMAC (sustainable thermoplastic composites), TTT (machine learning for bondline NDE), and OATMEAL (laser ablation and polymer healing), where I remain active.</p>
-        <p>I also led the printing team for Virginia Tech's 3D Printed Aircraft Competition team for three years, placing 2nd nationally in 2023 and 2025, and winning Most Innovative Design in 2025.</p>
-      </div>
-      <div>
-        <div class="fact">
-          <div class="fact-label">Position</div>
-          <div class="fact-value">PhD Student (Jan 2026–)</div>
-        </div>
-        <div class="fact">
-          <div class="fact-label">Institution</div>
-          <div class="fact-value">Northeastern University</div>
-        </div>
-        <div class="fact">
-          <div class="fact-label">Research areas</div>
-          <div class="fact-value">Polymer diffusion · Laser–material interactions · Composite NDE</div>
-        </div>
-        <div class="fact">
-          <div class="fact-label">Affiliation</div>
-          <div class="fact-value">NASA Langley D307</div>
-        </div>
-        <div class="fact">
-          <div class="fact-label">Prior degree</div>
-          <div class="fact-value">BS Aerospace Engineering, Virginia Tech, 2025</div>
-        </div>
-        <div class="fact">
-          <div class="fact-label">Contact</div>
-          <div class="fact-value"><a href="mailto:day.fi@northeastern.edu">day.fi@northeastern.edu</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-label">Research</div>
-    <div class="research-item">
-      <div class="research-bar"></div>
-      <div>
-        <h3>Polymer diffusion &amp; laser-induced surface engineering</h3>
-        <p>Developing predictive models linking polymer interdiffusion with laser–material interactions for controlled ablation in thermoplastic AFP. Writing first-author manuscript for <em>Composites Part A</em>.</p>
-        <div class="research-tag">OATMEAL Project · NASA Langley · 2025–present</div>
-      </div>
-    </div>
-    <div class="research-item">
-      <div class="research-bar"></div>
-      <div>
-        <h3>Machine learning for composite bondline NDE</h3>
-        <p>Trained SVMs and Gaussian process regression models to improve in-situ ultrasonic bondline thickness measurements during autoclave cure by 15%. Co-authored two papers under review.</p>
-        <div class="research-tag">TTT Project · NASA Langley · 2024</div>
-      </div>
-    </div>
-    <div class="research-item">
-      <div class="research-bar"></div>
-      <div>
-        <h3>Sustainable flax fiber thermoplastic composites</h3>
-        <p>Investigated flax fiber reinforced thermoplastics for advanced air mobility applications. Synthesized PVA hydrogels via freeze-thaw cycling; characterized resins by TGA, DSC, and DMA.</p>
-        <div class="research-tag">SUMAC Project · NASA Langley · 2024</div>
-      </div>
-    </div>
-    <p style="margin-top:1.5rem;"><a href="research.html" style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--accent);text-decoration:none;">Full research page →</a></p>
-  </div>
-
-  <div class="section">
-    <div class="section-label">Selected Publications</div>
-    <div class="pub-item">
-      <div class="pub-year">2026</div>
-      <div>
-        <div class="pub-title">Model calibration of miscible polymers and their selective removal <span class="pub-status">in preparation</span></div>
-        <div class="pub-authors"><strong>Day, F.</strong>, Kirchhoff, J., Hudson, T., Cano, R.</div>
-        <div class="pub-venue">Composites Part A: Applied Science and Manufacturing</div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2025</div>
-      <div>
-        <div class="pub-title">Improving bondline time of flight predictions during autoclave cure utilizing machine learning <span class="pub-status">under review</span></div>
-        <div class="pub-authors">Hudson, T., Pankiewicz, W., <strong>Day, F.</strong></div>
-        <div class="pub-venue">Research in Nondestructive Evaluation</div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2025</div>
-      <div>
-        <div class="pub-title">Ultrasonic inspection of tow-steered composite laminates during autoclave cure <span class="pub-status">under review</span></div>
-        <div class="pub-authors">Hudson, T., Koztowny, C., Gerogiou, N., Enos, R., <strong>Day, F.</strong></div>
-        <div class="pub-venue">Journal of Nondestructive Evaluation</div>
-      </div>
-    </div>
-    <p style="margin-top:1.5rem;"><a href="publications.html" style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--accent);text-decoration:none;">All publications &amp; presentations →</a></p>
-  </div>
-
-  <footer>© 2026 Finnian P. Day · Portland, ME</footer>
-
 </div>
+
+<!-- PROFILE LAYOUT -->
+<div class="wrap">
+  <div class="profile-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="headshot-wrap">
+        <img src="Images/headshot.JPEG" alt="Finnian Day">
+      </div>
+
+      <div class="sidebar-name">Finnian Day</div>
+      <div class="sidebar-role">
+        Composites &amp; Computation<br>
+        NASA Langley Fellow @ NEU
+      </div>
+
+      <div class="sidebar-links">
+        <a class="sidebar-link" href="mailto:day.fi@northeastern.edu">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          Email
+        </a>
+        <a class="sidebar-link" href="https://linkedin.com/in/finnian-day/" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="sidebar-link" href="https://github.com/fday20" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a class="sidebar-link" href="cv.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Curriculum Vitae
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <div class="section">
+        <div class="section-label">About</div>
+        <div class="prose">
+          <p>I'm a first-year PhD student at Northeastern University, where my research sits at the intersection of aerospace materials science, advanced manufacturing, and computational modeling. My current work focuses on how miscible polymers interdiffuse at interfaces — a fundamental process governing bond strength in laser-assisted automated fiber placement (AFP).</p>
+          <p>Before my PhD, I completed a BS in Aerospace Engineering at Virginia Tech (May 2025) and spent three consecutive terms at NASA Langley's Advanced Materials &amp; Processing Branch across three research projects: SUMAC (sustainable thermoplastic composites), TTT (machine learning for bondline NDE), and OATMEAL (laser ablation and polymer healing), where I remain active.</p>
+          <p>I also led the printing team for Virginia Tech's 3D Printed Aircraft Competition for three years, placing 2nd nationally in 2023 and 2025, and winning Most Innovative Design in 2025.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Research</div>
+        <div class="research-item">
+          <div class="research-bar"></div>
+          <div>
+            <h3>Polymer diffusion &amp; laser-induced surface engineering</h3>
+            <p>Developing predictive models linking polymer interdiffusion with laser–material interactions for controlled ablation in thermoplastic AFP. Writing first-author manuscript for <em>Composites Part A</em>.</p>
+            <div class="research-tag">OATMEAL Project · NASA Langley · 2025–present</div>
+          </div>
+        </div>
+        <div class="research-item">
+          <div class="research-bar"></div>
+          <div>
+            <h3>Machine learning for composite bondline NDE</h3>
+            <p>Trained SVMs and Gaussian process regression models to improve in-situ ultrasonic bondline thickness measurements during autoclave cure by 15%. Co-authored two papers under review.</p>
+            <div class="research-tag">TTT Project · NASA Langley · 2024</div>
+          </div>
+        </div>
+        <div class="research-item">
+          <div class="research-bar"></div>
+          <div>
+            <h3>Sustainable flax fiber thermoplastic composites</h3>
+            <p>Investigated flax fiber reinforced thermoplastics for advanced air mobility applications. Synthesized PVA hydrogels via freeze-thaw cycling; characterized resins by TGA, DSC, and DMA.</p>
+            <div class="research-tag">SUMAC Project · NASA Langley · 2024</div>
+          </div>
+        </div>
+        <p style="margin-top:1.25rem;"><a class="text-link" href="research.html">Full research page →</a></p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Selected Publications</div>
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <div class="pub-title">Model calibration of miscible polymers and their selective removal <span class="pub-status">in preparation</span></div>
+            <div class="pub-authors"><strong>Day, F.</strong>, Kirchhoff, J., Hudson, T., Cano, R.</div>
+            <div class="pub-venue">Composites Part A: Applied Science and Manufacturing</div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year">2025</div>
+          <div>
+            <div class="pub-title">Improving bondline time of flight predictions during autoclave cure utilizing machine learning <span class="pub-status">under review</span></div>
+            <div class="pub-authors">Hudson, T., Pankiewicz, W., <strong>Day, F.</strong></div>
+            <div class="pub-venue">Research in Nondestructive Evaluation</div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year">2025</div>
+          <div>
+            <div class="pub-title">Ultrasonic inspection of tow-steered composite laminates during autoclave cure <span class="pub-status">under review</span></div>
+            <div class="pub-authors">Hudson, T., Koztowny, C., Gerogiou, N., Enos, R., <strong>Day, F.</strong></div>
+            <div class="pub-venue">Journal of Nondestructive Evaluation</div>
+          </div>
+        </div>
+        <p style="margin-top:1.25rem;"><a class="text-link" href="publications.html">All publications &amp; presentations →</a></p>
+      </div>
+
+    </main>
+  </div><!-- end profile-layout -->
+</div><!-- end wrap -->
+
+<footer>© 2026 Finnian P. Day · Portland, ME · Northeastern University</footer>
+
+<script>
+  // Switch nav from transparent to solid once hero scrolls out
+  const nav = document.getElementById('main-nav');
+  const hero = document.querySelector('.hero');
+  const observer = new IntersectionObserver(
+    ([entry]) => nav.classList.toggle('solid', !entry.isIntersecting),
+    { threshold: 0 }
+  );
+  observer.observe(hero);
+</script>
+
 </body>
 </html>
