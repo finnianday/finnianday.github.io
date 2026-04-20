@@ -257,11 +257,15 @@
 
 /* ── DETAIL SECTIONS ── */
 .rd-divider {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--ink-2);
   padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--border);
   margin-bottom: 2.5rem;
@@ -269,7 +273,7 @@
 
 .research-detail {
   display: grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: 1fr 340px;
   gap: 2.5rem;
   align-items: start;
   padding-bottom: 3rem;
@@ -277,13 +281,13 @@
   border-bottom: 1px solid var(--border);
   scroll-margin-top: 72px;
 }
-.research-detail.flip { grid-template-columns: 260px 1fr; }
+.research-detail.flip { grid-template-columns: 340px 1fr; }
 .research-detail.flip .rd-img { order: -1; }
 .research-detail:last-of-type { border-bottom: none; }
 
 .rd-tag {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
@@ -292,7 +296,7 @@
 
 .rd-title {
   font-family: 'EB Garamond', serif;
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   font-weight: 500;
   color: var(--ink);
   line-height: 1.25;
@@ -301,7 +305,7 @@
 
 .rd-body p {
   font-family: 'EB Garamond', serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--ink-2);
   line-height: 1.75;
   margin-bottom: 0.8rem;
@@ -322,7 +326,7 @@
 
 .rd-img {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: auto;
   background: #c8d0d8;
   border-radius: 3px;
   display: flex;
@@ -348,3 +352,80 @@
   .research-detail.flip { grid-template-columns: 1fr; }
   .research-detail.flip .rd-img { order: 0; }
 }
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/5;
+  align-self: start;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.carousel-slide.active { opacity: 1; }
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f0ece6;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 0.85rem 0.75rem;
+  background: linear-gradient(to top, rgba(10,10,8,0.95) 0%, rgba(10,10,8,0.6) 50%, transparent 100%);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10,10,8,0.35);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.carousel-btn:hover { background: rgba(10,10,8,0.65); }
+.carousel-btn.prev { left: 0.5rem; }
+.carousel-btn.next { right: 0.5rem; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.85rem;
+  display: flex;
+  gap: 0.35rem;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carousel-dot.active { background: white; }
