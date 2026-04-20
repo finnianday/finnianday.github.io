@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finnian Day</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -15,18 +16,19 @@
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
     <li><a href="projects.html">Projects</a></li>
+    <li><a href="adventures.html">Adventures</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO — full bleed photo, text top-left directly on image -->
+<!-- HERO — full bleed photo, gradient overlay, text bottom-left -->
 <div class="hero">
   <img class="hero-img" src="Images/banner.jpg" alt="">
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <div class="hero-name">Finnian Day</div>
-    <div class="hero-tagline">PhD Student · Interdisciplinary Engineering · Northeastern University</div>
+    <div class="hero-tagline">PhD Student · Northeastern University · Interdisciplinary Engineering</div>
   </div>
 </div>
 
@@ -35,87 +37,93 @@
   <div class="content-wrap">
 
     <h2 class="intro-heading">Hi, I'm Finn!</h2>
-    <div class="intro-sub">PhD Student · NASA Langley Research Center · Northeastern University</div>
+    <div class="intro-sub">PhD Student at Northeastern Univeristy / The Roux Institute</div>
 
-    <!-- Photo floats right, text wraps around it -->
-    <img class="intro-photo-float" src="Images/headshot.JPEG" alt="Finnian Day">
-
-    <div class="prose">
-      <p>I'm a first-year PhD student in Interdisciplinary Engineering at Northeastern University, where my research sits at the intersection of aerospace materials science, advanced manufacturing, and computational modeling. My current work focuses on how miscible polymers interdiffuse at interfaces — a fundamental process governing bond strength in laser-assisted automated fiber placement (AFP).</p>
-      <p>Before my PhD, I completed a BS in Aerospace Engineering at Virginia Tech (May 2025) and spent three consecutive terms at NASA Langley's Advanced Materials &amp; Processing Branch across three research projects: SUMAC (sustainable thermoplastic composites), TTT (machine learning for bondline NDE), and OATMEAL (laser ablation and polymer healing), where I remain active.</p>
-      <p>I also led the printing team for Virginia Tech's 3D Printed Aircraft Competition for three years, placing 2nd nationally in 2023 and 2025, and winning Most Innovative Design in 2025.</p>
-    </div>
-
-    <!-- Social buttons row -->
+<div class="intro-grid">
+  <div class="intro-left">
+    <img class="intro-photo" src="Images/headshot.JPEG" alt="Finnian Day">
     <div class="social-row">
-      <a class="social-btn" href="mailto:day.fi@northeastern.edu">Email</a>
+      <a class="social-btn" href="mailto:day.fi@northeastern.edu">
+        <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
+        Email
+      </a>
+      <a class="social-btn" href="https://linkedin.com/in/finnian-day/" target="_blank">
+        <i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>
+        LinkedIn
+      </a>
+      <a class="social-btn" href="https://scholar.google.com/citations?user=NyANoekAAAAJ&hl=en&oi=ao" target="_blank">
+        <img src="https://cdn.simpleicons.org/googlescholar/b5422a" width="16" height="16" alt="Google Scholar">
+        Google Scholar
+      </a>
+      <a class="social-btn" href="https://orcid.org/0009-0006-0486-7404" target="_blank">
+        <i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>
+        ORCID
+      </a>
+
+
+
+
+
+<!-- 
+    <a class="social-btn" href="mailto:day.fi@northeastern.edu">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+       Email
+    </a>
+
+
       <a class="social-btn" href="https://linkedin.com/in/finnian-day/" target="_blank">LinkedIn</a>
-      <a class="social-btn" href="https://github.com/fday20" target="_blank">GitHub</a>
-      <a class="social-btn" href="cv.html">Curriculum Vitae</a>
+      <a class="social-btn" href="https://scholar.google.com/citations?user=NyANoekAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+      <a class="social-btn" href="https://orcid.org/0009-0006-0486-7404" target="_blank">ORCID</a> -->
     </div>
+  </div>
+  <div class="intro-right prose">
+      <p>I'm a first-year PhD student at <a href="https://roux.northeastern.edu/nu_research/engineering/" target="_blank">The Roux Institute</a> at Northeastern University in Portland, ME. I get to spend my days thinking about how materials behave at their limits and building computational tools to make sense of it all. I am lucky enough to be co-advised by both <a href="https://andrewneils.com/" target="_blank" >Dr. Andrew Neils</a> and <a href="https://roux.northeastern.edu/people/melanie-tory/" target="_blank">Dr. Melanie Tory</a>.</p>
+      <p>I grew up in a suburb of Boston, MA and decided to head south and attend Virginia Tech for my undergrad in Aerospace Engineering, graduating in 2025. On top of earning my degree, I also became a diehard Hokie fan (as difficult as that may be sometimes). Along the way I spent three semesters at NASA Langley Research Center working on composite materials research, which is where I caught the research bug.</p>
+      <p>For my PhD, my work lives at the intersection of aerospace materials, advanced manufacturing, and data visualization. Recently, I've gotten into cold spray, a process where metal powder gets blasted at supersonic speeds to build up coatings and structures without ever melting. I'm looking to understand and predict how cold sprayed material properties come together. It's part mechanics, part computation, and a lot of trial and error in the lab.  I also care a lot about how we communicate science, which is why data visualization ended up in my research mix. </p>
+      <p>When I'm not in the lab, you can find me climbing, skiing, hiking, and chasing the next adventure. I moved back to New England partly for the research, but also because Maine is an incredible backyard. Check out my Adventures pages if you want to see what I'm up to!</p>
+    </div>
+  </div>
 
-    <hr class="content-rule">
 
-    <h2 class="content-heading">Research</h2>
-    <div class="research-item">
-      <div class="research-bar"></div>
-      <div>
-        <h3>Polymer diffusion &amp; laser-induced surface engineering</h3>
-        <p>Developing predictive models linking polymer interdiffusion with laser–material interactions for controlled ablation in thermoplastic AFP. Writing first-author manuscript for <em>Composites Part A</em>.</p>
-        <div class="research-tag">OATMEAL Project · NASA Langley · 2025–present</div>
-      </div>
-    </div>
-    <div class="research-item">
-      <div class="research-bar"></div>
-      <div>
-        <h3>Machine learning for composite bondline NDE</h3>
-        <p>Trained SVMs and Gaussian process regression models to improve in-situ ultrasonic bondline thickness measurements during autoclave cure by 15%. Co-authored two papers under review.</p>
-        <div class="research-tag">TTT Project · NASA Langley · 2024</div>
-      </div>
-    </div>
-    <div class="research-item">
-      <div class="research-bar"></div>
-      <div>
-        <h3>Sustainable flax fiber thermoplastic composites</h3>
-        <p>Investigated flax fiber reinforced thermoplastics for advanced air mobility applications. Synthesized PVA hydrogels via freeze-thaw cycling; characterized resins by TGA, DSC, and DMA.</p>
-        <div class="research-tag">SUMAC Project · NASA Langley · 2024</div>
-      </div>
-    </div>
-    <p style="margin-top:1.25rem;"><a class="text-link" href="research.html">Full research page →</a></p>
+<hr class="content-rule">
 
-    <hr class="content-rule">
+<h2 class="content-heading">Explore</h2>
+<div class="photo-nav-grid">
+  <a class="photo-nav-item" href="research.html">
+    <img src="Images/research.JPEG" alt="...">
+    <div class="photo-nav-label">Research</div>
+  </a>
+  <a class="photo-nav-item" href="publications.html">
+    <img src="Images/publications.JPEG" alt="...">
+    <div class="photo-nav-label">Publications</div>
+  </a>
+  <a class="photo-nav-item" href="projects.html">
+    <img src="Images/projects.JPEG" alt="...">
+    <div class="photo-nav-label">Projects</div>
+  </a>
+  <a class="photo-nav-item" href="cv.html">
+    <img src="Images/CV.JPEG" alt="...">
+    <div class="photo-nav-label">CV</div>
+  </a>
+  <a class="photo-nav-item" href="adventures.html">
+    <img src="Images/adventures.JPG" alt="..." style="object-position: center 70%;">
+    <div class="photo-nav-label">Adventures</div>
+  </a>
+  <a class="photo-nav-item" href="contact.html">
+    <img src="Images/contact.JPEG" alt="...">
+    <div class="photo-nav-label">Contact</div>
+  </a>
+</div>
 
-    <h2 class="content-heading">Selected Publications</h2>
-    <div class="pub-item">
-      <div class="pub-year">2026</div>
-      <div>
-        <div class="pub-title">Model calibration of miscible polymers and their selective removal <span class="pub-status">in preparation</span></div>
-        <div class="pub-authors"><strong>Day, F.</strong>, Kirchhoff, J., Hudson, T., Cano, R.</div>
-        <div class="pub-venue">Composites Part A: Applied Science and Manufacturing</div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2025</div>
-      <div>
-        <div class="pub-title">Improving bondline time of flight predictions during autoclave cure utilizing machine learning <span class="pub-status">under review</span></div>
-        <div class="pub-authors">Hudson, T., Pankiewicz, W., <strong>Day, F.</strong></div>
-        <div class="pub-venue">Research in Nondestructive Evaluation</div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2025</div>
-      <div>
-        <div class="pub-title">Ultrasonic inspection of tow-steered composite laminates during autoclave cure <span class="pub-status">under review</span></div>
-        <div class="pub-authors">Hudson, T., Koztowny, C., Gerogiou, N., Enos, R., <strong>Day, F.</strong></div>
-        <div class="pub-venue">Journal of Nondestructive Evaluation</div>
-      </div>
-    </div>
-    <p style="margin-top:1.25rem;"><a class="text-link" href="publications.html">All publications &amp; presentations →</a></p>
 
-  </div><!-- end content-wrap -->
-</div><!-- end page-content -->
+  </div>
+</div>
 
-<footer>© 2026 Finnian P. Day · Portland, ME · Northeastern University</footer>
+<footer>
+  <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
+  <span>Last Updated: April 2026</span>
+</footer>
+
 
 <script>
   const nav = document.getElementById('main-nav');
