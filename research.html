@@ -69,7 +69,7 @@
           <div class="tl-label">SUMAC</div>
         </div>
         <div class="tl-node" data-id="hokiesat">
-          <div class="tl-year">2022–24</div>
+          <div class="tl-year">2022–23</div>
           <div class="tl-dot"></div>
           <div class="tl-label">CubeSat</div>
         </div>
@@ -285,35 +285,40 @@
   const panels = {
     coldspray: {
       tag:     'Cold Spray · Northeastern · 2026-present',
-      title:   'Full Project Title',
-      summary: 'One sentence describing what this project was about.',
-      anchor:  '#detail-coldspray'
+      title:   'Cold Spray Deposition & Interfacial Mechanics',
+      summary: 'Investigating how solid-state cold spray deposition can create functional metal coatings on composite and polymer substrates.',
+      anchor:  '#detail-coldspray',
+      img:     'Images/coldspray_booth.JPEG'
     },
 
 
     oatmeal: {
-      tag:     'OATMEAL · NASA Langley / Northeastern · 2025',
+      tag:     'OATMEAL · NASA Langley · 2025',
       title:   'Polymer Diffusion & Laser-Induced Surface Engineering',
-      summary: 'Building predictive models linking laser processing parameters to polymer interdiffusion and bond strength in thermoplastic AFP — grounded in reptation theory and Fickian diffusion.',
-      anchor:  '#detail-oatmeal'
+      summary: 'Quantified polymer interfacial diffusion and used a Bayesian optimization framework to predict laser ablation cavity depth from processing parameters',
+      anchor:  '#detail-oatmeal',
+      img:     'Images/oatmeal_ftir.JPEG'
     },
     ttt: {
       tag:     'TTT Project · NASA Langley · 2024',
       title:   'Machine Learning for Composite Bondline NDE',
-      summary: 'Trained SVM and Gaussian process regression models to improve in-situ ultrasonic bondline thickness predictions during autoclave cure by 15%, yielding two co-authored papers under review.',
-      anchor:  '#detail-ttt'
+      summary: 'Trained SVM and Gaussian process regression models to improve in-situ ultrasonic bondline thickness predictions during autoclave cure by 15%.',
+      anchor:  '#detail-ttt',
+      img:     'Images/ttt_autoclave.JPEG'
     },
     sumac: {
       tag:     'SUMAC Project · NASA Langley · 2024',
       title:   'Sustainable Flax Fiber Thermoplastic Composites',
       summary: 'Investigated flax fiber reinforced thermoplastics for advanced air mobility, synthesizing PVA hydrogels and characterizing thermal and mechanical behavior across processing conditions.',
-      anchor:  '#detail-sumac'
+      anchor:  '#detail-sumac',
+      img:     'Images/sumac_first_composite.JPEG'
     },
     hokiesat: {
-      tag:     'Hume Center · NSEPC CubeSat · 2022–2024',
+      tag:     'EMCCD CubeSat · Hume Center · 2022–2023',
       title:   'CubeSat Power Systems — HokieSat IV',
-      summary: 'Led power subsystem design and integration for a 3U CubeSat, building power budgets and trade studies around an EMCCD payload — presented at the Hume Center NSEPC Colloquium.',
-      anchor:  '#detail-hokiesat'
+      summary: 'Led power subsystem design and integration for a 6U CubeSat, building power budgets and trade studies around an first-of-its-kinda EMCCD payload.',
+      anchor:  '#detail-cubesat',
+      img:     'Images/cubesat_nuvu.png'
     },
   };
 
@@ -345,6 +350,13 @@
       titleEl.textContent   = d.title;
       summaryEl.textContent = d.summary;
       moreEl.href           = d.anchor;
+
+      const imgEl = document.querySelector('#tl-panel .tl-panel-img');
+      if (d.img) {
+        imgEl.innerHTML = `<img src="${d.img}" alt="${d.title}" style="width:100%;height:100%;object-fit:cover;display:block;">`;
+      } else {
+        imgEl.innerHTML = `<div class="tl-panel-img-caption">add photo here</div>`;
+      }
 
       panel.classList.remove('visible');
       void panel.offsetWidth;
