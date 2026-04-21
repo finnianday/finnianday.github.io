@@ -429,3 +429,7 @@
   transition: background 0.2s;
 }
 .carousel-dot.active { background: white; }
+
+#carousel-coldspray {
+  aspect-ratio: 1/1;
+}
