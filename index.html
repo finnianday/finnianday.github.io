@@ -11,7 +11,15 @@
 
 <nav id="main-nav">
   <a class="nav-logo" href="index.html">Finnian Day</a>
-  <ul class="nav-links">
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
@@ -22,7 +30,7 @@
   </ul>
 </nav>
 
-<!-- HERO — full bleed photo, gradient overlay, text bottom-left -->
+<!-- HERO -->
 <div class="hero">
   <img class="hero-img" src="Images/banner.jpg" alt="">
   <div class="hero-overlay"></div>
@@ -37,70 +45,68 @@
   <div class="content-wrap">
 
     <h2 class="intro-heading">Hi, I'm Finn!</h2>
-    <div class="intro-sub">PhD Student at Northeastern Univeristy / The Roux Institute</div>
+    <div class="intro-sub">PhD Student at Northeastern University / The Roux Institute</div>
 
-<div class="intro-grid">
-  <div class="intro-left">
-    <img class="intro-photo" src="Images/headshot.JPEG" alt="Finnian Day">
-    <div class="social-row">
-      <a class="social-btn" href="mailto:day.fi@northeastern.edu">
-        <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
-        Email
-      </a>
-      <a class="social-btn" href="https://linkedin.com/in/finnian-day/" target="_blank">
-        <i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>
-        LinkedIn
-      </a>
-      <a class="social-btn" href="https://scholar.google.com/citations?user=NyANoekAAAAJ&hl=en&oi=ao" target="_blank">
-        <img src="https://cdn.simpleicons.org/googlescholar/b5422a" width="16" height="16" alt="Google Scholar">
-        Google Scholar
-      </a>
-      <a class="social-btn" href="https://orcid.org/0009-0006-0486-7404" target="_blank">
-        <i class="fab fa-fw fa-orcid icon-pad-right" aria-hidden="true"></i>
-        ORCID
-      </a>
+    <div class="intro-grid">
+      <div class="intro-left">
+        <img class="intro-photo" src="Images/headshot.JPEG" alt="Finnian Day">
+        <div class="social-row">
+          <a class="social-btn" href="mailto:day.fi@northeastern.edu">
+            <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
+            Email
+          </a>
+          <a class="social-btn" href="https://linkedin.com/in/finnian-day/" target="_blank">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+            LinkedIn
+          </a>
+          <a class="social-btn" href="https://scholar.google.com/citations?user=NyANoekAAAAJ&hl=en&oi=ao" target="_blank">
+            <img src="https://cdn.simpleicons.org/googlescholar/b5422a" width="16" height="16" alt="Google Scholar">
+            Google Scholar
+          </a>
+          <a class="social-btn" href="https://orcid.org/0009-0006-0486-7404" target="_blank">
+            <i class="fab fa-fw fa-orcid" aria-hidden="true"></i>
+            ORCID
+          </a>
+        </div>
+      </div>
 
+      <div class="intro-right prose">
+        <p>I'm a first-year PhD student at <a href="https://roux.northeastern.edu/nu_research/engineering/" target="_blank">The Roux Institute</a> at Northeastern University in Portland, ME. I get to spend my days thinking about how materials behave at their limits and building computational tools to make sense of it all. I am lucky enough to be co-advised by both <a href="https://andrewneils.com/" target="_blank">Dr. Andrew Neils</a> and <a href="https://roux.northeastern.edu/people/melanie-tory/" target="_blank">Dr. Melanie Tory</a>.</p>
+        <p>I grew up in a suburb of Boston, MA and decided to head south and attend Virginia Tech for my undergrad in Aerospace Engineering, graduating in 2025. On top of earning my degree, I also became a diehard Hokie fan (as difficult as that may be sometimes). Along the way, I spent three semesters at NASA Langley Research Center working on composite materials research, which is where I caught the research bug.</p>
+        <p>For my PhD, my work lives at the intersection of aerospace materials, advanced manufacturing, and data visualization. Recently, I've gotten into cold spray, a process where metal powder gets blasted at supersonic speeds to build up coatings and structures without ever melting. I'm looking to understand and predict how cold sprayed material properties come together. It's part mechanics, part computation, and a lot of trial and error in the lab. I also care a lot about how we communicate science, which is why data visualization ended up in my research mix.</p>
+        <p>When I'm not in the lab, you can find me climbing, skiing, hiking, and chasing the next adventure. I moved back to New England not just for the research, but also because Maine is an incredible backyard. Check out my Adventures pages if you want to see what I'm up to!</p>
+      </div>
     </div>
-  </div>
-  <div class="intro-right prose">
-      <p>I'm a first-year PhD student at <a href="https://roux.northeastern.edu/nu_research/engineering/" target="_blank">The Roux Institute</a> at Northeastern University in Portland, ME. I get to spend my days thinking about how materials behave at their limits and building computational tools to make sense of it all. I am lucky enough to be co-advised by both <a href="https://andrewneils.com/" target="_blank" >Dr. Andrew Neils</a> and <a href="https://roux.northeastern.edu/people/melanie-tory/" target="_blank">Dr. Melanie Tory</a>.</p>
-      <p>I grew up in a suburb of Boston, MA and decided to head south and attend Virginia Tech for my undergrad in Aerospace Engineering, graduating in 2025. On top of earning my degree, I also became a diehard Hokie fan (as difficult as that may be sometimes). Along the way, I spent three semesters at NASA Langley Research Center working on composite materials research, which is where I caught the research bug.</p>
-      <p>For my PhD, my work lives at the intersection of aerospace materials, advanced manufacturing, and data visualization. Recently, I've gotten into cold spray, a process where metal powder gets blasted at supersonic speeds to build up coatings and structures without ever melting. I'm looking to understand and predict how cold sprayed material properties come together. It's part mechanics, part computation, and a lot of trial and error in the lab.  I also care a lot about how we communicate science, which is why data visualization ended up in my research mix. </p>
-      <p>When I'm not in the lab, you can find me climbing, skiing, hiking, and chasing the next adventure. I moved back to New England not just for the research, but also because Maine is an incredible backyard. Check out my Adventures pages if you want to see what I'm up to!</p>
+
+    <hr class="content-rule">
+
+    <h2 class="content-heading">Explore</h2>
+    <div class="photo-nav-grid">
+      <a class="photo-nav-item" href="research.html">
+        <img src="Images/research.JPEG" alt="Research">
+        <div class="photo-nav-label">Research</div>
+      </a>
+      <a class="photo-nav-item" href="publications.html">
+        <img src="Images/publications.JPEG" alt="Publications">
+        <div class="photo-nav-label">Publications</div>
+      </a>
+      <a class="photo-nav-item" href="projects.html">
+        <img src="Images/projects.JPEG" alt="Projects">
+        <div class="photo-nav-label">Projects</div>
+      </a>
+      <a class="photo-nav-item" href="cv.html">
+        <img src="Images/CV.JPEG" alt="CV">
+        <div class="photo-nav-label">CV</div>
+      </a>
+      <a class="photo-nav-item" href="adventures.html">
+        <img src="Images/adventures.JPG" alt="Adventures" style="object-position: center 70%;">
+        <div class="photo-nav-label">Adventures</div>
+      </a>
+      <a class="photo-nav-item" href="contact.html">
+        <img src="Images/contact.JPEG" alt="Contact">
+        <div class="photo-nav-label">Contact</div>
+      </a>
     </div>
-  </div>
-
-
-<hr class="content-rule">
-
-<h2 class="content-heading">Explore</h2>
-<div class="photo-nav-grid">
-  <a class="photo-nav-item" href="research.html">
-    <img src="Images/research.JPEG" alt="...">
-    <div class="photo-nav-label">Research</div>
-  </a>
-  <a class="photo-nav-item" href="publications.html">
-    <img src="Images/publications.JPEG" alt="...">
-    <div class="photo-nav-label">Publications</div>
-  </a>
-  <a class="photo-nav-item" href="projects.html">
-    <img src="Images/projects.JPEG" alt="...">
-    <div class="photo-nav-label">Projects</div>
-  </a>
-  <a class="photo-nav-item" href="cv.html">
-    <img src="Images/CV.JPEG" alt="...">
-    <div class="photo-nav-label">CV</div>
-  </a>
-  <a class="photo-nav-item" href="adventures.html">
-    <img src="Images/adventures.JPG" alt="..." style="object-position: center 70%;">
-    <div class="photo-nav-label">Adventures</div>
-  </a>
-  <a class="photo-nav-item" href="contact.html">
-    <img src="Images/contact.JPEG" alt="...">
-    <div class="photo-nav-label">Contact</div>
-  </a>
-</div>
-
 
   </div>
 </div>
@@ -110,8 +116,8 @@
   <span>Last Updated: April 2026</span>
 </footer>
 
-
 <script>
+  // Solid nav on scroll past hero
   const nav = document.getElementById('main-nav');
   const hero = document.querySelector('.hero');
   const observer = new IntersectionObserver(
@@ -119,6 +125,27 @@
     { threshold: 0 }
   );
   observer.observe(hero);
+
+  // Hamburger toggle
+  const toggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    // Force solid nav when menu is open
+    if (isOpen) nav.classList.add('solid');
+  });
+
+  // Close menu when a link is tapped
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
 </script>
 
 </body>

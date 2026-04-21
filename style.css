@@ -57,9 +57,45 @@ nav.solid {
   text-transform: uppercase;
   color: rgba(255,255,255,0.85);
   text-decoration: none;
+  flex-shrink: 0;
+  z-index: 101;
 }
 nav.solid .nav-logo { color: var(--ink); }
 
+/* ── HAMBURGER BUTTON ── */
+.nav-hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+  flex-shrink: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+nav.solid .nav-hamburger span { background: var(--ink); }
+
+/* Animate to X when open */
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── NAV LINKS ── */
 .nav-links { display: flex; gap: 1.75rem; list-style: none; }
 .nav-links a {
   font-family: 'IBM Plex Mono', monospace;
@@ -96,45 +132,6 @@ nav.solid .nav-links a.active { color: var(--accent); }
   display: block;
 }
 
-/* CSS-only placeholder banner — geometric mountain silhouette */
-.hero-placeholder {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg,
-      #4a7fa0 0%,
-      #6a9fc0 25%,
-      #88b8d0 45%,
-      #b0ccd8 60%,
-      #c8d8dc 72%,
-      #d8e4e0 80%,
-      #e0e8e4 88%,
-      #e8ece8 100%
-    );
-}
-.hero-placeholder::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 55%;
-  background:
-    linear-gradient(175deg, transparent 48%, #2a3028 48.5%),
-    linear-gradient(168deg, transparent 52%, #343c30 52.5%),
-    linear-gradient(185deg, transparent 44%, #1e2420 44.5%);
-  opacity: 0.85;
-}
-.hero-placeholder::after {
-  content: 'add a landscape photo here';
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-}
-
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -149,7 +146,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
 
 .hero-text {
   position: absolute;
-  bottom: clamp(3rem, 4vw, 2rem);
+  bottom: clamp(2rem, 4vw, 3rem);
   left: clamp(1.5rem, 5vw, 3.5rem);
   right: clamp(1.5rem, 5vw, 3.5rem);
 }
@@ -251,7 +248,6 @@ nav.solid .nav-links a.active { color: var(--accent); }
   justify-content: center;
   text-align: center;
   gap: 0.5rem;
-
 }
 .social-btn:last-child { border-bottom: 1px solid var(--border); }
 .social-btn:hover { color: var(--ink); }
@@ -271,8 +267,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
   letter-spacing: -0.01em;
 }
 
-
-/* PHOTO NAV GRID */
+/* ── PHOTO NAV GRID ── */
 .photo-nav-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -286,11 +281,6 @@ nav.solid .nav-links a.active { color: var(--accent); }
   text-decoration: none;
   overflow: hidden;
   border-radius: 3px;
-}
-
-
-.photo-nav-item:hover .photo-nav-placeholder {
-  transform: scale(1.04);
 }
 
 .photo-nav-item img {
@@ -323,7 +313,6 @@ nav.solid .nav-links a.active { color: var(--accent); }
   transform: translateX(0);
 }
 
-
 .photo-nav-label {
   position: absolute;
   bottom: 0;
@@ -355,7 +344,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
   margin-bottom: 1.25rem;
 }
 
-/* PROSE */
+/* ── PROSE ── */
 .prose p { font-size: 1.25rem; color: var(--ink-2); margin-bottom: 1rem; line-height: 1.78; }
 .prose p:last-child { margin-bottom: 0; }
 .prose a {
@@ -363,11 +352,9 @@ nav.solid .nav-links a.active { color: var(--accent); }
   text-decoration: none;
   border-bottom: 1px solid var(--accent);
 }
-.prose a:hover {
-  opacity: 0.75;
-}
+.prose a:hover { opacity: 0.75; }
 
-/* RESEARCH */
+/* ── RESEARCH ── */
 .research-item {
   display: grid;
   grid-template-columns: 3px 1fr;
@@ -381,7 +368,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
 .research-item p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.6; margin-bottom: 0.35rem; }
 .research-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.63rem; color: var(--ink-3); letter-spacing: 0.03em; }
 
-/* PUBLICATIONS */
+/* ── PUBLICATIONS ── */
 .pub-item {
   display: grid;
   grid-template-columns: 40px 1fr;
@@ -405,7 +392,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
   font-style: normal;
 }
 
-/* CV */
+/* ── CV ── */
 .cv-group-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.68rem;
@@ -431,7 +418,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
 .cv-entry ul li { font-size: 0.86rem; color: var(--ink-2); padding-left: 1rem; position: relative; margin-bottom: 0.22rem; line-height: 1.52; }
 .cv-entry ul li::before { content: '–'; position: absolute; left: 0; color: var(--ink-3); }
 
-/* PROJECTS */
+/* ── PROJECTS ── */
 .project-item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
 .project-item:first-child { border-top: 1px solid var(--border); }
 .project-org { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--ink-3); letter-spacing: 0.03em; margin-bottom: 0.25rem; }
@@ -439,7 +426,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
 .project-item p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.6; }
 .project-result { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--accent); margin-top: 0.35rem; }
 
-/* CONTACT */
+/* ── CONTACT ── */
 .contact-row {
   display: flex;
   align-items: baseline;
@@ -457,7 +444,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
 .contact-row-val { font-size: 0.93rem; color: var(--ink-2); }
 .contact-row:hover .contact-row-val { color: var(--accent); }
 
-/* LINK */
+/* ── LINK ── */
 .text-link {
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
@@ -466,7 +453,7 @@ nav.solid .nav-links a.active { color: var(--accent); }
 }
 .text-link:hover { text-decoration: underline; }
 
-/* FOOTER */
+/* ── FOOTER ── */
 footer {
   max-width: var(--max);
   margin: 0 auto;
@@ -481,7 +468,7 @@ footer {
   align-items: center;
 }
 
-/* INNER PAGE HERO (no photo) */
+/* ── INNER PAGE HERO (no photo) ── */
 .inner-hero {
   padding: 3rem 0 2rem;
   border-bottom: 1px solid var(--border);
@@ -491,12 +478,223 @@ footer {
   padding-right: clamp(1.25rem, 5vw, 2.5rem);
 }
 
-/* RESPONSIVE */
-@media (max-width: 760px) {
-  .intro-photo-left { float: none; width: 100%; margin: 0 0 1.5rem 0; }
-  .intro-photo-float { float: none; width: 100%; margin: 0 0 1.5rem 0; }
-  .cv-entry { grid-template-columns: 1fr; gap: 0.2rem; }
-  .pub-item { grid-template-columns: 36px 1fr; gap: 0.75rem; }
-  .nav-links { gap: 1rem; }
-  .nav-links a { font-size: 0.68rem; }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — TABLET  (max 900px)
+   Two-column intro becomes narrower but stays 2-col
+   ═══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+  }
+
+  .photo-nav-grid {
+    gap: 0.75rem;
+  }
+
+  .photo-nav-item img {
+    height: 160px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — MOBILE  (max 680px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 680px) {
+
+  /* ── Nav: show hamburger, hide horizontal links ── */
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    /* Hidden by default — slide down when .open */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 0 1rem;
+    /* Slide up and fade out when closed */
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links li:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.9rem clamp(1.5rem, 5vw, 3.5rem);
+    font-size: 0.78rem;
+    color: var(--ink-2) !important; /* always dark on white bg */
+  }
+  .nav-links a.active { color: var(--accent) !important; }
+  .nav-links a:hover { color: var(--ink) !important; }
+
+  /* ── Hero: shorter on mobile, bigger tagline ── */
+  .hero {
+    height: clamp(320px, 75vw, 460px);
+  }
+
+  .hero-tagline {
+    font-size: clamp(0.78rem, 3.5vw, 1.1rem);
+    /* Break "Northeastern University · Interdisciplinary Engineering" more gracefully */
+    max-width: 90vw;
+  }
+
+  /* ── Content wrap: tighter padding ── */
+  .content-wrap {
+    padding: 2rem 1.25rem;
+  }
+
+  /* ── Intro section: stack vertically ── */
+  .intro-heading {
+    font-size: 2.2rem;
+  }
+
+  .intro-sub {
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* On mobile, photo goes to a reasonable width and centers */
+  .intro-photo {
+    max-width: 280px;
+    margin: 0 auto 0;
+    display: block;
+  }
+
+  /* Social buttons go 2-across instead of stacked list */
+  .social-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .social-btn {
+    flex: 1 1 50%;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+    padding: 0.85rem 0.5rem;
+    font-size: 0.72rem;
+    justify-content: center;
+  }
+
+  /* Remove the last-child bottom border since social-row handles it */
+  .social-btn:last-child {
+    border-bottom: none;
+    border-right: none;
+  }
+  /* 4 items: 2x2 grid — remove right border on even items */
+  .social-btn:nth-child(2n) {
+    border-right: none;
+  }
+  /* Add a top border on the second row */
+  .social-btn:nth-child(3),
+  .social-btn:nth-child(4) {
+    border-top: 1px solid var(--border);
+  }
+
+  /* Prose text slightly smaller */
+  .prose p {
+    font-size: 1.1rem;
+  }
+
+  /* ── Photo nav: 2 columns instead of 3 ── */
+  .photo-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .photo-nav-item img {
+    height: 130px;
+    transform: scale(1); /* disable the zoom-in so no overflow on mobile */
+  }
+
+  .photo-nav-label {
+    font-size: 1.1rem;
+    padding: 1.5rem 0.75rem 0.6rem;
+  }
+
+  /* ── CV entries: stack date above content ── */
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  /* ── Pub items: tighter ── */
+  .pub-item {
+    grid-template-columns: 32px 1fr;
+    gap: 0.6rem;
+  }
+
+  /* ── Footer: stack vertically ── */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE  (max 400px)
+   Extra polish for 375px iPhones etc.
+   ═══════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .hero-name {
+    font-size: clamp(2.8rem, 12vw, 3.8rem);
+  }
+
+  .intro-heading {
+    font-size: 1.9rem;
+  }
+
+  .intro-sub {
+    font-size: 0.78rem;
+  }
+
+  .photo-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .photo-nav-item img {
+    height: 110px;
+  }
+
+  .social-btn {
+    font-size: 0.65rem;
+    padding: 0.75rem 0.25rem;
+  }
 }
