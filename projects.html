@@ -8,73 +8,111 @@
 </head>
 <body>
 
-<nav>
-  <a class="nav-logo" href="index.html">finnian day</a>
-  <ul class="nav-links">
+<nav id="main-nav">
+  <a class="nav-logo" href="index.html">Finnian Day</a>
+
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="projects.html">Projects</a></li>
     <li><a href="adventures.html">Adventures</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<div class="wrap">
-
-  <div class="hero">
-    <h1 class="hero-name"><em>Projects</em></h1>
-    <div class="hero-role">Competition · Senior Design · Industry</div>
-    <p class="hero-bio">
-      Engineering projects spanning additive manufacturing, spacecraft power systems, Mars habitat structures, and civil infrastructure — most with a team, all hands-on.
-    </p>
+<div class="hero">
+  <img class="hero-img" src="Images/banner.jpg" alt="">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <div class="hero-name">Projects</div>
+    <div class="hero-tagline">Finnian Day · Northeastern University</div>
   </div>
-
-  <div class="section">
-    <div class="section-label">University &amp; Competition Projects</div>
-
-    <div class="project-item">
-      <div class="project-org">Virginia Tech · Printing Team Lead · Aug 2022–Jul 2025</div>
-      <h3>3D Printed Aircraft Competition</h3>
-      <p>Led a multidisciplinary team of 30+ engineers to design, fabricate, and fly a fully 3D-printed fixed-wing aircraft over three competition years. Oversaw end-to-end additive manufacturing: coordinating printer operations, part iteration, and quality controls. The team competed nationally at UT Arlington's annual competition.</p>
-      <div class="project-result">2nd place (2023, 2025) · Most Innovative Design (2025)</div>
-    </div>
-
-    <div class="project-item">
-      <div class="project-org">Virginia Tech · Structures Team Lead · Aug 2024–May 2025</div>
-      <h3>Senior Design — NASA RASC-AL: Martian radiation shield</h3>
-      <p>Led structural design and analysis of coil transportation and support structures for a proposed Martian radiation shield habitat. Performed system-level structural sizing through integrated power, mass, geometry, and load analyses. Validated subteam FEA models and authored structural requirements ensuring analyses matched mission loading cases.</p>
-      <div class="project-result">NASA RASC-AL competition entry, 2025</div>
-    </div>
-
-    <div class="project-item">
-      <div class="project-org">Hume Center for National Security, Virginia Tech · Jan–Dec 2022</div>
-      <h3>6U CubeSat — power system design</h3>
-      <p>Researched and designed the power system for a prototype 6U CubeSat using a first-of-its-kind EMCCD payload for national security imaging applications. Integrated the power subsystem with mission-level CubeSat interfaces through power budgets and trade studies. Presented at the 2022 National Security Education Program Colloquium.</p>
-    </div>
-
-  </div>
-
-  <div class="section">
-    <div class="section-label">Industry &amp; Co-op Projects</div>
-
-    <div class="project-item">
-      <div class="project-org">Collins Aerospace · Windsor Locks, CT · May 2023–Jan 2024</div>
-      <h3>NASA Gateway HALO temperature control &amp; Orion heat exchanger</h3>
-      <p>Created electrical bonding diagrams for 500+ components in NASA Gateway's HALO module temperature control system. Modeled system components in Simulink/Simscape to verify performance against customer requirements. Conducted ammonia flow testing for NASA's Orion Heat Exchanger and generated performance documentation. Managed requirements and verifications in IBM DOORS.</p>
-    </div>
-
-    <div class="project-item">
-      <div class="project-org">Barletta Engineering; CB3A JV · 2020–2023</div>
-      <h3>Tunnel segment strength analysis &amp; field engineering</h3>
-      <p>Developed alternative testing methods through data analysis to redefine tunnel segment strength criteria, enabling more efficient structural qualification. Conducted daily field inspections and built Excel-based data visualizations for technical reporting. Managed certified payroll for 100+ employees across multiple sites.</p>
-    </div>
-
-  </div>
-
-  <footer>© 2026 Finnian P. Day · Portland, ME</footer>
-
 </div>
+
+<div class="page-content">
+  <div class="content-wrap" style="min-height: 40vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; padding-top: 5rem; padding-bottom: 5rem;">
+
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);">Under Construction</div>
+
+    <h2 style="font-family: 'EB Garamond', serif; font-size: 2.5rem; font-weight: 400; color: var(--ink); line-height: 1.1;">Working on it.</h2>
+
+    <p style="font-family: 'EB Garamond', serif; font-size: 1.2rem; color: var(--ink-2); max-width: 480px; line-height: 1.7;">
+      This page is coming soon. Check back later.
+    </p>
+
+
+  </div>
+
+  <div class="content-wrap">
+    <hr class="content-rule">
+    <h2 class="content-heading">Explore</h2>
+    <div class="photo-nav-grid">
+      <a class="photo-nav-item" href="research.html">
+        <img src="Images/research.JPEG" alt="Research">
+        <div class="photo-nav-label">Research</div>
+      </a>
+      <a class="photo-nav-item" href="publications.html">
+        <img src="Images/publications.JPEG" alt="Publications">
+        <div class="photo-nav-label">Publications</div>
+      </a>
+      <a class="photo-nav-item" href="projects.html">
+        <img src="Images/projects.JPEG" alt="Projects">
+        <div class="photo-nav-label">Projects</div>
+      </a>
+      <a class="photo-nav-item" href="cv.html">
+        <img src="Images/CV.JPEG" alt="CV">
+        <div class="photo-nav-label">CV</div>
+      </a>
+      <a class="photo-nav-item" href="adventures.html">
+        <img src="Images/adventures.JPG" alt="Adventures" style="object-position: center 70%;">
+        <div class="photo-nav-label">Adventures</div>
+      </a>
+      <a class="photo-nav-item" href="contact.html">
+        <img src="Images/contact.JPEG" alt="Contact">
+        <div class="photo-nav-label">Contact</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
+  <span>Last Updated: April 2026</span>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  const hero = document.querySelector('.hero');
+  const observer = new IntersectionObserver(
+    ([entry]) => nav.classList.toggle('solid', !entry.isIntersecting),
+    { threshold: 0 }
+  );
+  observer.observe(hero);
+
+  const toggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    if (isOpen) nav.classList.add('solid');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+
 </body>
 </html>

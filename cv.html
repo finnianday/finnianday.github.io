@@ -8,190 +8,111 @@
 </head>
 <body>
 
-<nav>
-  <a class="nav-logo" href="index.html">finnian day</a>
-  <ul class="nav-links">
+<nav id="main-nav">
+  <a class="nav-logo" href="index.html">Finnian Day</a>
+
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="adventures.html">Adventures</a></li>
-    <li><a href="cv.html" class="active">CV</a></li>
+    <li><a href="cv.html">CV</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<div class="wrap">
-
-  <div class="hero">
-    <h1 class="hero-name"><em>CV</em></h1>
-    <div class="hero-role">Curriculum Vitae — last updated January 2026</div>
-    <p class="hero-bio">Full academic and professional history. A PDF version is available below.</p>
-    <div class="hero-meta">
-      <a href="Finn_Resume_Jan2026.pdf" download>Download PDF ↓</a>
-    </div>
+<div class="hero">
+  <img class="hero-img" src="Images/banner.jpg" alt="">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <div class="hero-name">CV</div>
+    <div class="hero-tagline">Finnian Day · Northeastern University</div>
   </div>
-
-  <div class="section">
-
-    <div class="cv-group-label">Education</div>
-
-    <div class="cv-entry">
-      <div class="cv-date">Jan 2026–present</div>
-      <div>
-        <h3>PhD, Interdisciplinary Engineering <em style="font-weight:400;font-style:italic;font-size:0.9rem;color:var(--ink-3);">(in progress)</em></h3>
-        <div class="cv-place">Northeastern University — Portland, ME</div>
-        <ul>
-          <li>Research areas: Aerospace Engineering, Materials Science, Data Visualization</li>
-          <li>Affiliated with NASA Langley Research Center, Advanced Materials &amp; Processing Branch (D307)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-date">May 2025</div>
-      <div>
-        <h3>BS, Aerospace Engineering · Minor in Spanish</h3>
-        <div class="cv-place">Virginia Polytechnic Institute and State University — Blacksburg, VA</div>
-        <ul>
-          <li>GPA: 3.51/4.00 · In-Major GPA: 3.68/4.00</li>
-          <li>Dean's List — 5 semesters, College of Engineering</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-group-label">Research &amp; Work Experience</div>
-
-    <div class="cv-entry">
-      <div class="cv-date">Aug 2025–present</div>
-      <div>
-        <h3>Composite Materials Research Intern — OATMEAL</h3>
-        <div class="cv-place">NASA Langley Research Center, Advanced Materials &amp; Processing Branch</div>
-        <ul>
-          <li>Optimized laser-ablation process parameters by coupling modeling and experimentation to capture ablation physics</li>
-          <li>Developed a predictive model linking polymer diffusion with laser–material interactions for controlled ablation</li>
-          <li>Led polymer interdiffusion research, quantifying diffusion times and healing behavior across varied polymer systems</li>
-          <li>Writing first-author journal manuscript on polymer diffusion physics and laser-induced surface engineering</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-date">May–Aug 2024</div>
-      <div>
-        <h3>Composite Materials Research Intern — TTT</h3>
-        <div class="cv-place">NASA Langley Research Center, Advanced Materials &amp; Processing Branch</div>
-        <ul>
-          <li>Developed non-destructive methods to measure bonded carbon fiber composite joint thickness during cure</li>
-          <li>Created MATLAB GUIs for live analysis of in-situ ultrasonic amplitude and time-of-flight data from autoclave cure</li>
-          <li>Trained and implemented machine learning models (SVMs, GPRs) improving ultrasonic measurements by 15%</li>
-          <li>Co-authored journal paper on machine learning integration in thermoset composite manufacturing</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-date">Jan–May 2024</div>
-      <div>
-        <h3>Composite Materials Research Intern — SUMAC</h3>
-        <div class="cv-place">NASA Langley Research Center, Advanced Materials &amp; Processing Branch</div>
-        <ul>
-          <li>Investigated flax fiber thermoplastic composites for advanced air mobility and commercial aircraft applications</li>
-          <li>Fabricated and tested ASTM specimens using desktop CNC to evaluate mechanical properties across fiber layups</li>
-          <li>Synthesized poly(vinyl alcohol) hydrogels via freeze-thaw cycling to enhance thermoplastic resin properties</li>
-          <li>Characterized sustainable thermoplastic resins using TGA and DSC to measure properties versus temperature</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-date">May 2023–Jan 2024</div>
-      <div>
-        <h3>Systems Engineering Co-Op — HALO &amp; Orion Programs</h3>
-        <div class="cv-place">Collins Aerospace — Windsor Locks, CT</div>
-        <ul>
-          <li>Created electrical bonding diagrams for 500+ components in NASA Gateway's HALO temperature control system</li>
-          <li>Modeled system components in Simulink/Simscape to verify performance against customer requirements</li>
-          <li>Conducted ammonia flow testing for NASA Orion Heat Exchanger; generated performance documentation</li>
-          <li>Managed and wrote requirements and verifications in IBM DOORS for comprehensive program reporting</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-date">2020–2023</div>
-      <div>
-        <h3>Estimating / Field / Project Engineering Co-Ops</h3>
-        <div class="cv-place">Barletta Engineering; CB3A JV — Canton, MA / Pawtucket, RI</div>
-        <ul>
-          <li>Developed alternative testing methods to redefine tunnel segment strength criteria through data analysis</li>
-          <li>Conducted daily field inspections; created Excel-based data visualizations for technical reporting</li>
-          <li>Managed timesheets and certified payroll for 100+ employees across multiple job sites</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-date">May–Aug 2019</div>
-      <div>
-        <h3>Technical Intern</h3>
-        <div class="cv-place">Simpson, Gumpertz &amp; Heger Inc. — Waltham, MA</div>
-        <ul>
-          <li>Analyzed project data and assisted with design preparation and review for heavy civil infrastructure projects</li>
-          <li>Contributed to structural design, repair, and investigation projects</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-group-label">Awards &amp; Honors</div>
-
-    <div class="cv-entry">
-      <div class="cv-date">2025</div>
-      <div><h3>Most Innovative Design Award</h3><div class="cv-place">UT Arlington 3D-Printed Aircraft Competition</div></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">2024</div>
-      <div><h3>Exceptional Contribution Award ×2</h3><div class="cv-place">NASA Langley Advanced Materials and Processing Branch (Spring &amp; Summer 2024)</div></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">2023, 2025</div>
-      <div><h3>2nd Place — 3D-Printed Aircraft Competition</h3><div class="cv-place">UT Arlington National Competition</div></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">2021–2025</div>
-      <div><h3>Dean's List — 5 semesters</h3><div class="cv-place">Virginia Tech College of Engineering</div></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">2020–2022</div>
-      <div>
-        <h3>Industry Academic Scholarships</h3>
-        <div class="cv-place">Labor Relations Division of CIM · Construction Industries of RI · Utility Contractors' Assoc. of NE</div>
-      </div>
-    </div>
-
-    <div class="cv-group-label">Technical Skills</div>
-
-    <div class="cv-entry">
-      <div class="cv-date">Composites</div>
-      <div><p style="font-size:0.9rem;color:var(--ink-2);">Carbon fiber composites · thermoplastics · composite layup design · ultrasonic NDE</p></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">Computation</div>
-      <div><p style="font-size:0.9rem;color:var(--ink-2);">MATLAB · Python · SolidWorks · Creo · Fusion 360 · FEA · machine learning (SVM, GPR)</p></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">Lab</div>
-      <div><p style="font-size:0.9rem;color:var(--ink-2);">TGA · DSC · DMA · rheometry · FDM 3D printing · design of experiments</p></div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-date">Other</div>
-      <div><p style="font-size:0.9rem;color:var(--ink-2);">IBM DOORS · VS Code · requirements development · Spanish (professional proficiency)</p></div>
-    </div>
-
-  </div>
-
-  <footer>© 2026 Finnian P. Day · Portland, ME</footer>
-
 </div>
+
+<div class="page-content">
+  <div class="content-wrap" style="min-height: 40vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; padding-top: 5rem; padding-bottom: 5rem;">
+
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);">Under Construction</div>
+
+    <h2 style="font-family: 'EB Garamond', serif; font-size: 2.5rem; font-weight: 400; color: var(--ink); line-height: 1.1;">Working on it.</h2>
+
+    <p style="font-family: 'EB Garamond', serif; font-size: 1.2rem; color: var(--ink-2); max-width: 480px; line-height: 1.7;">
+      This page is coming soon. Check back later.
+    </p>
+
+
+  </div>
+
+  <div class="content-wrap">
+    <hr class="content-rule">
+    <h2 class="content-heading">Explore</h2>
+    <div class="photo-nav-grid">
+      <a class="photo-nav-item" href="research.html">
+        <img src="Images/research.JPEG" alt="Research">
+        <div class="photo-nav-label">Research</div>
+      </a>
+      <a class="photo-nav-item" href="publications.html">
+        <img src="Images/publications.JPEG" alt="Publications">
+        <div class="photo-nav-label">Publications</div>
+      </a>
+      <a class="photo-nav-item" href="projects.html">
+        <img src="Images/projects.JPEG" alt="Projects">
+        <div class="photo-nav-label">Projects</div>
+      </a>
+      <a class="photo-nav-item" href="cv.html">
+        <img src="Images/CV.JPEG" alt="CV">
+        <div class="photo-nav-label">CV</div>
+      </a>
+      <a class="photo-nav-item" href="adventures.html">
+        <img src="Images/adventures.JPG" alt="Adventures" style="object-position: center 70%;">
+        <div class="photo-nav-label">Adventures</div>
+      </a>
+      <a class="photo-nav-item" href="contact.html">
+        <img src="Images/contact.JPEG" alt="Contact">
+        <div class="photo-nav-label">Contact</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
+  <span>Last Updated: April 2026</span>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  const hero = document.querySelector('.hero');
+  const observer = new IntersectionObserver(
+    ([entry]) => nav.classList.toggle('solid', !entry.isIntersecting),
+    { threshold: 0 }
+  );
+  observer.observe(hero);
+
+  const toggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    if (isOpen) nav.classList.add('solid');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+
 </body>
 </html>
