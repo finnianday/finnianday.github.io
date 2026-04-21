@@ -18,8 +18,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  overflow-x: auto;
   padding: 0.5rem 0;
+  /* Allow horizontal scroll on very small screens as a last resort,
+     but nodes are sized to fit comfortably at 320px+ */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .timeline-track::before {
@@ -36,13 +39,15 @@
 
 .tl-node {
   flex: 1;
-  min-width: 110px;
+  min-width: 80px; /* was 110px — tighter on mobile */
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   position: relative;
   z-index: 1;
+  /* Larger tap target */
+  padding: 0.5rem 0;
 }
 
 .tl-year {
@@ -111,7 +116,7 @@
 
 .tl-panel-img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/5;
   background: #c8d0d8;
   border-radius: 3px;
   display: flex;
@@ -195,15 +200,6 @@
   overflow: hidden;
 }
 .broad-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.broad-img-caption {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.42);
-  text-align: center;
-  padding: 1rem;
-}
 
 .broad-lead {
   font-weight: 500;
@@ -218,24 +214,6 @@
   margin-bottom: 0.8rem;
 }
 .broad-text p:last-child { margin-bottom: 0; }
-
-.interests-list { margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
-.interests-list li {
-  list-style: none;
-  display: flex;
-  gap: 0.55rem;
-  font-family: 'EB Garamond', serif;
-  font-size: 0.95rem;
-  color: var(--ink-2);
-  line-height: 1.5;
-}
-.interests-list li::before {
-  content: '—';
-  font-family: 'IBM Plex Mono', monospace;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
 
 .img-hover-wrap { position: relative; }
 .img-hover-caption {
@@ -312,18 +290,6 @@
 }
 .rd-body p:last-child { margin-bottom: 0; }
 
-.rd-keywords { display: flex; flex-wrap: wrap; gap: 0.32rem; margin-top: 1rem; }
-.rd-kw {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  background: #f0ece6;
-  padding: 0.16rem 0.45rem;
-  border-radius: 2px;
-}
-
 .rd-img {
   width: 100%;
   height: auto;
@@ -335,25 +301,8 @@
   overflow: hidden;
 }
 .rd-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.rd-img-caption {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.42);
-  text-align: center;
-  padding: 1rem;
-}
 
-@media (max-width: 700px) {
-  .broad-intro,
-  .tl-panel,
-  .research-detail,
-  .research-detail.flip { grid-template-columns: 1fr; }
-  .research-detail.flip .rd-img { order: 0; }
-}
-
-
+/* ── CAROUSEL ── */
 .carousel {
   position: relative;
   width: 100%;
@@ -363,20 +312,20 @@
   overflow: hidden;
 }
 
+#carousel-coldspray { aspect-ratio: 1/1; }
+
 .carousel-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
-
 .carousel-slide.active { opacity: 1; }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: #f0ece6;
+  object-fit: cover;
   display: block;
 }
 
@@ -406,10 +355,16 @@
   cursor: pointer;
   z-index: 10;
   transition: background 0.2s;
+  /* Larger tap target on mobile */
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .carousel-btn:hover { background: rgba(10,10,8,0.65); }
-.carousel-btn.prev { left: 0.5rem; }
-.carousel-btn.next { right: 0.5rem; }
+.carousel-btn.prev { left: 0; border-radius: 0 3px 3px 0; }
+.carousel-btn.next { right: 0; border-radius: 3px 0 0 3px; }
 
 .carousel-dots {
   position: absolute;
@@ -430,6 +385,128 @@
 }
 .carousel-dot.active { background: white; }
 
-#carousel-coldspray {
-  aspect-ratio: 1/1;
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — TABLET (max 900px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .research-detail,
+  .research-detail.flip {
+    grid-template-columns: 1fr 280px;
+  }
+
+  .broad-intro {
+    grid-template-columns: 200px 1fr;
+    gap: 1.75rem;
+  }
+
+  .broad-img { height: 300px; }
+
+  .tl-panel { grid-template-columns: 180px 1fr; gap: 1.5rem; }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — MOBILE (max 680px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 680px) {
+
+  /* ── Timeline: smaller text so all 5 nodes fit ── */
+  .timeline-section { padding-top: 2rem; }
+
+  .tl-node { min-width: 60px; padding: 0.4rem 0; }
+
+  .tl-year {
+    font-size: 0.58rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .tl-label {
+    font-size: 0.58rem;
+    margin-top: 0.35rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* Timeline panel: stack image above text */
+  .tl-panel {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .tl-panel-img {
+    aspect-ratio: 16/9; /* wider + shorter feels better stacked */
+    max-height: 200px;
+  }
+
+  .tl-panel-title { font-size: 1.1rem; }
+  .tl-panel-summary { font-size: 0.92rem; }
+
+  /* ── Broad intro: stack image above text ── */
+  .broad-intro {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .broad-img {
+    height: 240px;
+    /* Show hover caption permanently on mobile (no hover state) */
+  }
+  .broad-img .img-hover-caption { opacity: 1; }
+
+  .broad-text p { font-size: 1.1rem; }
+
+  /* ── rd-divider: scale down logos and text ── */
+  .rd-divider {
+    font-size: 1.35rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+  .rd-divider img {
+    height: 3rem !important; /* override inline style */
+  }
+
+  /* ── Research details: stack carousel below text ── */
+  .research-detail,
+  .research-detail.flip {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  .research-detail.flip .rd-img { order: 0; }
+
+  .rd-title { font-size: 1.4rem; }
+  .rd-body p { font-size: 1.05rem; }
+
+  /* ── Carousels: shorter on mobile so they don't eat the whole screen ── */
+  .carousel,
+  #carousel-coldspray {
+    aspect-ratio: 3/5;
+  }
+
+  /* CubeSat static image — just let it be natural height */
+  .rd-img img { max-height: 280px; object-fit: contain; }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE (max 400px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .tl-node { min-width: 52px; }
+  .tl-year, .tl-label { font-size: 0.52rem; }
+
+  .rd-divider { font-size: 1.1rem; }
+  .rd-divider img { height: 2.25rem !important; }
+
+  .carousel,
+  #carousel-coldspray {
+    aspect-ratio: 1/1;
+  }
+
+  .broad-img { height: 200px; }
 }

@@ -11,7 +11,14 @@
 
 <nav id="main-nav">
   <a class="nav-logo" href="index.html">Finnian Day</a>
-  <ul class="nav-links">
+
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html" class="active">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
@@ -31,13 +38,6 @@
   </div>
 </div>
 
-<script>
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('solid', window.scrollY > 10);
-  });
-</script>
-
 <div class="page-content">
   <div class="content-wrap">
 
@@ -47,7 +47,6 @@
       <div class="timeline-label">Research Timeline — click to explore</div>
 
       <div class="timeline-track">
-
         <div class="tl-node" data-id="coldspray">
           <div class="tl-year">2026-NOW</div>
           <div class="tl-dot"></div>
@@ -91,17 +90,14 @@
 
 
     <!-- ══ 2. BROAD OVERVIEW ══ -->
-<!-- ══ 2. BROAD OVERVIEW ══ -->
-      <div class="broad-intro">
-        <div class="broad-img img-hover-wrap">
-          <img src="Images/research_overview.JPEG" alt="In the lab at NASA Langley">
-          <div class="img-hover-caption">Polishing samples at NASA Langley, 2024</div>
-        </div>
+    <div class="broad-intro">
+      <div class="broad-img img-hover-wrap">
+        <img src="Images/research_overview.JPEG" alt="In the lab at NASA Langley">
+        <div class="img-hover-caption">Polishing samples at NASA Langley, 2024</div>
+      </div>
       <div class="broad-text">
         <p><strong class="broad-lead">I am broadly interested in understanding how aerospace materials behave at the critical interfaces that determine their performance.</strong> Whether its particles impacting a substrate at supersonic speeds, polymers diffusing into one another, or ultrasonic waves probing a material for defects, my work centers on how to predict and control what happens at material interfaces.</p>
-        <p>
-          My PhD research investigates solid-state additive manufacturing through cold spray. My work centers on how processing parameters govern bonding mechanisms and interfacial quality across different material systems. Across all of them, the same underlying mechanisms play out at interfaces that are difficult to observe and hard to predict. Long term, I'm interested in applying data visualization and machine learning to materials characterization by using in-situ sensor data to predict process-structure-property relationships without destructive testing.        
-        </p>
+        <p>My PhD research investigates solid-state additive manufacturing through cold spray. My work centers on how processing parameters govern bonding mechanisms and interfacial quality across different material systems. Across all of them, the same underlying mechanisms play out at interfaces that are difficult to observe and hard to predict. Long term, I'm interested in applying data visualization and machine learning to materials characterization by using in-situ sensor data to predict process-structure-property relationships without destructive testing.</p>
       </div>
     </div>
 
@@ -136,9 +132,8 @@
         <button class="carousel-btn prev">&#8592;</button>
         <button class="carousel-btn next">&#8594;</button>
         <div class="carousel-dots"></div>
-
       </div>
-      </div>
+    </div>
 
     <div class="rd-divider">
       <img src="Images/nasa_logo.png" alt="NASA" style="height:4rem;">
@@ -150,7 +145,7 @@
         <div class="rd-tag">OATMEAL Project · NASA Langley · 2025</div>
         <div class="rd-title">Polymer Diffusion &amp; Laser-Induced Surface Engineering</div>
         <p>During my third internship at NASA Langley, I was able to lead my own research thrusts. On the OATMEAL (Out-of-autoclave Amorphous/Crystalline Thermoplastic Materials for Energy-Efficient Aerospace-Grade Laminates) project, I ran polymer diffusion experiments using spatial FT-IR spectroscopy to quantify how PEI diffuses into PEEK across different temperatures and times. The process involved heating and quenching polymer films, mounting and polishing cross-sections, then collecting FT-IR data.</p>
-        <p>The other half of my work focused on surface laser ablation. By varying laser power I measured material removal depth using laser confocal topology mapping and mass measurements. Putting this into a Bayesian optimization framework using Guassian processes enabled cavity depth predictions from laser parameters.</p>
+        <p>The other half of my work focused on surface laser ablation. By varying laser power I measured material removal depth using laser confocal topology mapping and mass measurements. Putting this into a Bayesian optimization framework using Gaussian processes enabled cavity depth predictions from laser parameters.</p>
         <p>Big thanks to Dr. Tyler Hudson, Joseph Kirchhoff, Wil, and Bert for bringing onto the OATeamz!</p>
       </div>
       <div class="carousel" id="carousel-oatmeal">
@@ -178,24 +173,16 @@
         <button class="carousel-btn next">&#8594;</button>
         <div class="carousel-dots"></div>
       </div>
-
-
-
-
-
     </div>
 
     <div class="research-detail" id="detail-ttt">
-
       <div class="rd-body">
         <div class="rd-tag">TTT Project · NASA Langley · 2024</div>
         <div class="rd-title">Composite NDE and Machine Learning</div>
-        <p>My second internship at Langley was on the TTT (Transformational Tools and Technologies) project where I worked on ultrasonic NDE (nondestructive evaluation) on carbon fiber composites. During autoclave during of bonded composite joints, you don't know whats happening at the bondline. I used in-situ ultrasonic sensors to measure bondline thickness in real time and built MATLAB GUIs for live analysis of the data. The second half of this project was applying machine learning to make these measurements more accurate. This was my first time applying ML to a tangible problem, training SVMs and Gaussian process regression models that improved predictions by 15%. This work resulted in a co-authored paper in <em>Applied Composite Materials</em>.</p>
+        <p>My second internship at Langley was on the TTT (Transformational Tools and Technologies) project where I worked on ultrasonic NDE (nondestructive evaluation) on carbon fiber composites. During autoclave cure of bonded composite joints, you don't know what's happening at the bondline. I used in-situ ultrasonic sensors to measure bondline thickness in real time and built MATLAB GUIs for live analysis of the data. The second half of this project was applying machine learning to make these measurements more accurate. This was my first time applying ML to a tangible problem, training SVMs and Gaussian process regression models that improved predictions by 15%. This work resulted in a co-authored paper in <em>Applied Composite Materials</em>.</p>
         <p>Alongside the bondline work, I also contributed to in-situ ultrasonic analysis of a tow-steered composite panel. I helped correlate ultrasonic C-scans to cure cycle parameters like temperature, pressure, and Tg to monitor defects introduced during AFP (automated fiber placement) layup. Check out this co-authored paper in <em>Journal of Nondestructive Evaluation</em>.</p>
-        <p>Shout out to my mentor Dr. Tyler Hudson,  officemate Nick, and Joseph, Wil, and Henry for a great summer research group! </p>
+        <p>Shout out to my mentor Dr. Tyler Hudson, officemate Nick, and Joseph, Wil, and Henry for a great summer research group!</p>
       </div>
-
-
       <div class="carousel" id="carousel-ttt">
         <div class="carousel-slide active">
           <img src="Images/ttt_autoclave.JPEG" alt="TTT autoclave" style="object-fit: cover; object-position: 35%;">
@@ -210,7 +197,7 @@
           <div class="carousel-caption">Giving Tyler a carbon fiber picture frame we made (L-R Tyler, Nick, myself, Henry)</div>
         </div>
         <div class="carousel-slide">
-          <img src="Images/ttt_setup.png" alt="TTT Setup">
+          <img src="Images/ttt_setup.png" alt="TTT Setup" style="object-fit: contain; ">
           <div class="carousel-caption">Nick and I setup for in-situ ultrasonic data collection</div>
         </div>
         <div class="carousel-slide">
@@ -221,8 +208,6 @@
         <button class="carousel-btn next">&#8594;</button>
         <div class="carousel-dots"></div>
       </div>
-
-
     </div>
 
     <div class="research-detail" id="detail-sumac">
@@ -230,8 +215,8 @@
         <div class="rd-tag">SUMAC Project · NASA Langley · 2024</div>
         <div class="rd-title">Sustainable Flax Fiber Thermoplastic Composites</div>
         <p>During my first internship at NASA Langley, I joined a brand new materials project. SUMAC (Sustainable Manufacturing of AirCraft) was looking to investigate using bio-derived resins and flax fibers for aerospace composite structures. My job was to actually try to demonstrate this idea.</p>
-        <p>I synthesized polyvinyl alcohol (PVA) hydrogels from scratch as a simple resin to test a flax fiber composite. Working with a new material system, a lot of the work was troubleshooting. I iterated through composite layups, tested different processing methods, and machined  coupons to run mechanical testing. Trying to figure out why consolidation was failing, why resin was bleeding out, and why specimens weren't behaving as expected was a great intro to composite materials. I also learned thermal testing techniques like TGA and DSC, exposing me to the many characterization possibilities in materials.</p>
-        <p>I'm extremely grateful to Dr. Chris Wohl for his mentorship. It was my first real exposure to materials characterization and composite fabrication, and it set the foundation for everything I've done since. </p>
+        <p>I synthesized polyvinyl alcohol (PVA) hydrogels from scratch as a simple resin to test a flax fiber composite. Working with a new material system, a lot of the work was troubleshooting. I iterated through composite layups, tested different processing methods, and machined coupons to run mechanical testing. Trying to figure out why consolidation was failing, why resin was bleeding out, and why specimens weren't behaving as expected was a great intro to composite materials. I also learned thermal testing techniques like TGA and DSC, exposing me to the many characterization possibilities in materials.</p>
+        <p>I'm extremely grateful to Dr. Chris Wohl for his mentorship. It was my first real exposure to materials characterization and composite fabrication, and it set the foundation for everything I've done since.</p>
       </div>
       <div class="carousel" id="carousel-sumac">
         <div class="carousel-slide active">
@@ -260,14 +245,13 @@
       <img src="Images/vt_logo.png" alt="Virginia Tech" style="height:5rem;">
       Undergraduate Research
     </div>
-    <div class="research-detail" id="detail-cubesat">
 
+    <div class="research-detail" id="detail-cubesat">
       <div class="rd-body">
         <div class="rd-tag">EMCCD CubeSat · Hume Center for National Security · 2022–2023</div>
         <div class="rd-title">CubeSat Power Systems</div>
-        <p>My first real taste of research and systems engineering came from the Hume Center for National Security at Virginia Tech. I joined a team led by Dr. Leon Harding working with the Canadian Space Agency designing a 6U CubeSat around a first-of-its-kind Electron Multiplying CCD (EMCCD) payload. An EMCCD is an imaging sennsor typically used for ground-based telescope, not in small sats. I led the design and integration of the power subsystems. Starting from scratch I built out the full power system, iterating through power budgets, running trade studies, and making sure everything would integrate together. I presented the power system design at the Hume Center Colloquium, which was my first time presenting research to an audience beyond my advisors. This experience is really what convinced me I wanted to keep doing research. </p>
+        <p>My first real taste of research and systems engineering came from the Hume Center for National Security at Virginia Tech. I joined a team led by Dr. Leon Harding working with the Canadian Space Agency designing a 6U CubeSat around a first-of-its-kind Electron Multiplying CCD (EMCCD) payload. An EMCCD is an imaging sensor typically used for ground-based telescopes, not in small sats. I led the design and integration of the power subsystems. Starting from scratch I built out the full power system, iterating through power budgets, running trade studies, and making sure everything would integrate together. I presented the power system design at the Hume Center Colloquium, which was my first time presenting research to an audience beyond my advisors. This experience is really what convinced me I wanted to keep doing research.</p>
       </div>
-
       <div class="rd-img">
         <img src="Images/cubesat_nuvu.png" alt="nuvu CubeSat">
       </div>
@@ -277,11 +261,37 @@
 </div><!-- /page-content -->
 
 <footer>
-  <span>© 2026 Finnian P. Day</span>
-  <span>Portland, ME · Northeastern University</span>
+  <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
+  <span>Last Updated: April 2026</span>
 </footer>
 
 <script>
+  // ── Solid nav on scroll ──
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('solid', window.scrollY > 10);
+  });
+
+  // ── Hamburger toggle ──
+  const toggle   = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    if (isOpen) nav.classList.add('solid');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // ── Timeline ──
   const panels = {
     coldspray: {
       tag:     'Cold Spray · Northeastern · 2026-present',
@@ -290,12 +300,10 @@
       anchor:  '#detail-coldspray',
       img:     'Images/coldspray_booth.JPEG'
     },
-
-
     oatmeal: {
       tag:     'OATMEAL · NASA Langley · 2025',
       title:   'Polymer Diffusion & Laser-Induced Surface Engineering',
-      summary: 'Quantified polymer interfacial diffusion and used a Bayesian optimization framework to predict laser ablation cavity depth from processing parameters',
+      summary: 'Quantified polymer interfacial diffusion and used a Bayesian optimization framework to predict laser ablation cavity depth from processing parameters.',
       anchor:  '#detail-oatmeal',
       img:     'Images/oatmeal_ftir.JPEG'
     },
@@ -316,7 +324,7 @@
     hokiesat: {
       tag:     'EMCCD CubeSat · Hume Center · 2022–2023',
       title:   'CubeSat Power Systems — HokieSat IV',
-      summary: 'Led power subsystem design and integration for a 6U CubeSat, building power budgets and trade studies around an first-of-its-kinda EMCCD payload.',
+      summary: 'Led power subsystem design and integration for a 6U CubeSat, building power budgets and trade studies around a first-of-its-kind EMCCD payload.',
       anchor:  '#detail-cubesat',
       img:     'Images/cubesat_nuvu.png'
     },
@@ -364,32 +372,38 @@
     });
   });
 
-
-
+  // ── Carousels ──
   document.querySelectorAll('.carousel').forEach(carousel => {
-  const slides = carousel.querySelectorAll('.carousel-slide');
-  const dotsEl = carousel.querySelector('.carousel-dots');
-  let current = 0;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dotsEl = carousel.querySelector('.carousel-dots');
+    let current = 0;
 
-  // build dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goTo(i));
-    dotsEl.appendChild(dot);
+    slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(dot);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsEl.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsEl.children[current].classList.add('active');
+    }
+
+    carousel.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
+    carousel.querySelector('.next').addEventListener('click', () => goTo(current + 1));
+
+    // Swipe support for mobile
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
   });
-
-  function goTo(n) {
-    slides[current].classList.remove('active');
-    dotsEl.children[current].classList.remove('active');
-    current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dotsEl.children[current].classList.add('active');
-  }
-
-  carousel.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
-  carousel.querySelector('.next').addEventListener('click', () => goTo(current + 1));
-});
 </script>
 
 </body>
