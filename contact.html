@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Finnian Day</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="contact_style.css">  
 </head>
 <body>
 
@@ -33,21 +35,38 @@
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <div class="hero-name">Contact</div>
-    <div class="hero-tagline">Finnian Day · Northeastern University</div>
+    <div class="hero-tagline">Let's Connect!</div>
   </div>
 </div>
 
 <div class="page-content">
-  <div class="content-wrap" style="min-height: 40vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; padding-top: 5rem; padding-bottom: 5rem;">
+  <div class="content-wrap">
 
-    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);">Under Construction</div>
+    <div class="contact-section">
 
-    <h2 style="font-family: 'EB Garamond', serif; font-size: 2.5rem; font-weight: 400; color: var(--ink); line-height: 1.1;">Working on it.</h2>
+      <div class="contact-header">
+        <p class="contact-intro">
+          I love to collaborate wherever I can! I'm always happy to connect with new people, discuss ideas, or explore potential research collaborations. Whether you have a question about my work or just want to say hello, feel free to reach out.
+        </p>
+      </div>
 
-    <p style="font-family: 'EB Garamond', serif; font-size: 1.2rem; color: var(--ink-2); max-width: 480px; line-height: 1.7;">
-      This page is coming soon. Check back later.
-    </p>
+      <div class="social-row">
+        <a class="social-btn" href="mailto:day.fi@northeastern.edu">
+          <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
+          day.fi@northeastern.edu
+        </a>
+        <a class="social-btn" href="https://www.linkedin.com/in/finnian-day/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+      </div>
+    </div>
 
+    <div class="contact-photo-strip">
+      <img src="Images/contact_tunnel.JPEG" alt="" class="contact-photo">
+      <img src="Images/contact_ooze.JPEG" alt="" class="contact-photo contact-photo--wide">
+      <img src="Images/contact_marker20.JPEG" alt="" class="contact-photo" style="object-position: left center;">
+    </div>
 
   </div>
 
@@ -87,6 +106,7 @@
   <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
   <span>Last Updated: April 2026</span>
 </footer>
+
 
 <script>
   const nav = document.getElementById('main-nav');
