@@ -1,0 +1,193 @@
+/* ── PUBLICATIONS PAGE ── */
+
+.scholar-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--ink);
+  border-radius: 3px;
+  margin-bottom: 3rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.scholar-bar:hover { background: #2a2926; }
+.scholar-bar-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #4285f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scholar-bar-icon img { display: block; }
+.scholar-bar-text { flex: 1; }
+.scholar-bar-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.35rem;
+  color: #fff;
+  line-height: 1.2;
+}
+.scholar-bar-arrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+  flex-shrink: 0;
+  transition: color 0.15s, transform 0.15s;
+}
+.scholar-bar:hover .scholar-bar-arrow {
+  color: rgba(255,255,255,0.7);
+  transform: translateX(3px);
+}
+
+/* ── SECTION HEADERS ── */
+.pub-section { margin-bottom: 3rem; }
+.pub-section:last-child { margin-bottom: 0; }
+
+.pub-section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+.pub-section-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.3rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.pub-section-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+/* ── SHARED ENTRY STYLES (pub + talk) ── */
+.pub-entry,
+.talk-entry {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub-entry:last-child,
+.talk-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+/* Year + badge row */
+.talk-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+.talk-year {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  color: var(--ink-3);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.talk-header .pub-badge { margin-bottom: 0; }
+
+/* Content */
+.talk-body {}
+
+.pub-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+}
+.pub-authors {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--ink-3);
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+}
+.pub-authors strong { color: var(--ink-2); font-weight: 500; }
+.pub-venue {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink-2);
+  line-height: 1.5;
+  margin-bottom: 0.55rem;
+}
+.pub-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pub-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.pub-link:hover { color: var(--accent); border-color: var(--accent); }
+
+.talk-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+.talk-meta {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+/* ── BADGES ── */
+.pub-badge {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.pub-badge.invited {
+  background: rgba(181,66,42,0.1);
+  color: var(--accent);
+  border: 1px solid rgba(181,66,42,0.25);
+}
+.pub-badge.journal {
+  background: rgba(66,133,244,0.08);
+  color: #3a6db5;
+  border: 1px solid rgba(66,133,244,0.2);
+}
+.pub-badge.in-review {
+  background: rgba(138,135,132,0.1);
+  color: var(--ink-3);
+  border: 1px solid var(--border);
+}
+.pub-badge.oral {
+  background: rgba(138,135,132,0.1);
+  color: var(--ink-3);
+  border: 1px solid var(--border);
+}
+
+/* ── EXPLORE GRID SPACING ── */
+.content-wrap + .content-wrap { padding-top: 0; }
+
+/* ── MOBILE ── */
+@media (max-width: 560px) {
+  .pub-badge {
+    font-size: 0.76rem;
+  }
+}
