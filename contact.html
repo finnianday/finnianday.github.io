@@ -6,8 +6,6 @@
   <title>Contact — Finnian Day</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="contact_style.css">  
-  <script src="analytics.js"></script>
 </head>
 <body>
 
@@ -108,6 +106,90 @@
   <span>Last Updated: April 2026</span>
 </footer>
 
+<style>
+  /* ── Contact photo strip ── */
+  .contact-photo-strip {
+    display: flex;
+    gap: 0.5rem;
+    height: 280px;
+    margin: 2rem 0 0;
+    overflow: hidden;
+  }
+
+  .contact-photo {
+    flex: 1;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    min-width: 0;
+  }
+
+  .contact-photo--wide {
+    flex: 1.7;
+  }
+
+  /* ── Contact page styles ── */
+  .contact-section {
+    padding: 2rem 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--ink-2);
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* ── Override social-btn for contact page ── */
+  .contact-section .social-row {
+    margin-top: 0;
+    gap: 0.75rem;
+    flex-direction: column;
+    border: none;
+  }
+
+  .contact-section .social-btn {
+    border: 1.5px solid var(--accent);
+    padding: 0.9rem 1.5rem;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .contact-section .social-btn:first-child,
+  .contact-section .social-btn:last-child {
+    border: 1.5px solid var(--accent);
+  }
+
+  .contact-section .social-btn:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  @media (max-width: 640px) {
+    .contact-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-photo-strip {
+      height: auto;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .contact-photo,
+    .contact-photo--wide {
+      flex: none;
+      width: 100%;
+      height: 220px;
+    }
+  }
+</style>
 
 <script>
   const nav = document.getElementById('main-nav');
