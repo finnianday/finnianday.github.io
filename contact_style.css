@@ -61,9 +61,33 @@
     color: white;
   }
 
+  .contact-wrap { padding-bottom: 1rem; }
+
+  .contact-caption {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--ink-3);
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+
   @media (max-width: 640px) {
     .contact-section {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+
+    .contact-photo-strip {
+      height: auto;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .contact-photo,
+    .contact-photo--wide {
+      flex: none;
+      width: 100%;
+      height: 220px;
     }
   }
