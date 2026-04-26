@@ -228,10 +228,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: white;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s;
 }
-.img-hover-wrap:hover .img-hover-caption { opacity: 1; }
+
 
 /* ── DETAIL SECTIONS ── */
 .rd-divider {
