@@ -385,6 +385,28 @@
 }
 .carousel-dot.active { background: white; }
 
+/* ── Results block inside rd-body ── */
+.rd-results {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.rd-results-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.45rem;
+}
+.rd-result-item {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+
 
 /* ═══════════════════════════════════════════════
    RESPONSIVE — TABLET (max 900px)
