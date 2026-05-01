@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,442 +9,495 @@
   <link rel="stylesheet" href="research_style.css">
   <script src="analytics.js"></script>
 </head>
+
 <body>
 
-<nav id="main-nav">
-  <a class="nav-logo" href="index.html">Finnian Day</a>
+  <nav id="main-nav">
+    <a class="nav-logo" href="index.html">Finnian Day</a>
 
-  <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="research.html" class="active">Research</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="adventures.html">Adventures</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="adventures.html">Adventures</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<div class="hero">
-  <img class="hero-img" src="Images/research_banner.JPEG" alt="" style="object-position: center 58%;">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <div class="hero-name">Research</div>
-    <div class="hero-tagline">Aerospace Materials · Advanced Manufacturing · Data Visualization</div>
+  <div class="hero">
+    <img class="hero-img" src="Images/research_banner.JPEG" alt="" style="object-position: center 58%;">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <div class="hero-name">Research</div>
+      <div class="hero-tagline">Aerospace Materials · Advanced Manufacturing · Data Visualization</div>
+    </div>
   </div>
-</div>
 
-<div class="page-content">
-  <div class="content-wrap">
+  <div class="page-content">
+    <div class="content-wrap">
 
-    <!-- ══ 1. TIMELINE ══ -->
-    <div class="timeline-section">
+      <!-- ══ 1. TIMELINE ══ -->
+      <div class="timeline-section">
 
-      <div class="timeline-label">Research Timeline — click to explore</div>
+        <div class="timeline-label">Research Timeline — click to explore</div>
 
-      <div class="timeline-track">
-        <div class="tl-node" data-id="coldspray">
-          <div class="tl-year">2026-NOW</div>
-          <div class="tl-dot"></div>
-          <div class="tl-label">Cold Spray</div>
+        <div class="timeline-track">
+          <div class="tl-node" data-id="coldspray">
+            <div class="tl-year">2026-NOW</div>
+            <div class="tl-dot"></div>
+            <div class="tl-label">Cold Spray</div>
+          </div>
+          <div class="tl-node" data-id="oatmeal">
+            <div class="tl-year">2025</div>
+            <div class="tl-dot"></div>
+            <div class="tl-label">OATMEAL</div>
+          </div>
+          <div class="tl-node" data-id="ttt">
+            <div class="tl-year">2024</div>
+            <div class="tl-dot"></div>
+            <div class="tl-label">TTT</div>
+          </div>
+          <div class="tl-node" data-id="sumac">
+            <div class="tl-year">2024</div>
+            <div class="tl-dot"></div>
+            <div class="tl-label">SUMAC</div>
+          </div>
+          <div class="tl-node" data-id="hokiesat">
+            <div class="tl-year">2022–23</div>
+            <div class="tl-dot"></div>
+            <div class="tl-label">CubeSat</div>
+          </div>
         </div>
-        <div class="tl-node" data-id="oatmeal">
-          <div class="tl-year">2025</div>
-          <div class="tl-dot"></div>
-          <div class="tl-label">OATMEAL</div>
+
+        <div class="tl-panel" id="tl-panel">
+          <div class="tl-panel-img">
+            <div class="tl-panel-img-caption" id="tl-img-caption">add photo here</div>
+          </div>
+          <div class="tl-panel-body">
+            <div class="tl-panel-tag" id="tl-tag"></div>
+            <div class="tl-panel-title" id="tl-title"></div>
+            <div class="tl-panel-summary" id="tl-summary"></div>
+            <a class="tl-more" id="tl-more" href="#">Full details below ↓</a>
+          </div>
         </div>
-        <div class="tl-node" data-id="ttt">
-          <div class="tl-year">2024</div>
-          <div class="tl-dot"></div>
-          <div class="tl-label">TTT</div>
+
+      </div><!-- /timeline-section -->
+
+
+      <!-- ══ 2. BROAD OVERVIEW ══ -->
+      <div class="broad-intro">
+        <div class="broad-img img-hover-wrap">
+          <img src="Images/research_overview.JPEG" alt="In the lab at NASA Langley">
+          <div class="img-hover-caption">Polishing samples at NASA Langley, 2024</div>
         </div>
-        <div class="tl-node" data-id="sumac">
-          <div class="tl-year">2024</div>
-          <div class="tl-dot"></div>
-          <div class="tl-label">SUMAC</div>
-        </div>
-        <div class="tl-node" data-id="hokiesat">
-          <div class="tl-year">2022–23</div>
-          <div class="tl-dot"></div>
-          <div class="tl-label">CubeSat</div>
+        <div class="broad-text">
+          <p><strong class="broad-lead">I am broadly interested in understanding how aerospace materials behave at the
+              critical interfaces that determine their performance.</strong> Whether its particles impacting a substrate
+            at supersonic speeds, polymers diffusing into one another, or ultrasonic waves probing a material for
+            defects, my work centers on how to predict and control what happens at material interfaces.</p>
+          <p>My PhD research investigates solid-state additive manufacturing through cold spray. My work centers on how
+            processing parameters govern bonding mechanisms and interfacial quality across different material systems.
+            Across all of them, the same underlying mechanisms play out at interfaces that are difficult to observe and
+            hard to predict. Long term, I'm interested in applying data visualization and machine learning to materials
+            characterization by using in-situ sensor data to predict process-structure-property relationships without
+            destructive testing.</p>
         </div>
       </div>
 
-      <div class="tl-panel" id="tl-panel">
-        <div class="tl-panel-img">
-          <div class="tl-panel-img-caption" id="tl-img-caption">add photo here</div>
+
+      <!-- ══ 3. DETAIL SECTIONS ══ -->
+      <div class="rd-divider">
+        <img src="Images/northeastern_logo.png" alt="Northeastern" style="height:5rem;">
+        PhD Research
+      </div>
+
+      <div class="research-detail" id="detail-coldspray">
+        <div class="rd-body">
+          <div class="rd-tag">Cold Spray · Northeastern · 2026–Present</div>
+          <div class="rd-title">Cold Spray Deposition & Interfacial Mechanics</div>
+          <p>Since starting my PhD, I've been investigating cold spray as a platform for depositing functional coatings
+            across a range of material systems, things like metal coatings on carbon fiber composites or metallized
+            polymer structures. The work combines solid-state additive manufacturing, interfacial mechanics, and
+            materials characterization, to work towards an understanding of interfacial bonding mechanisms.</p>
+          <p>Stay tuned for significant research milestones and updates!</p>
         </div>
-        <div class="tl-panel-body">
-          <div class="tl-panel-tag"     id="tl-tag"></div>
-          <div class="tl-panel-title"   id="tl-title"></div>
-          <div class="tl-panel-summary" id="tl-summary"></div>
-          <a class="tl-more" id="tl-more" href="#">Full details below ↓</a>
+
+        <div class="carousel" id="carousel-coldspray">
+          <div class="carousel-slide active">
+            <img src="Images/coldspray_booth.JPEG" alt="cold spray booth"
+              style="object-fit: cover; object-position: center center">
+            <div class="carousel-caption">Northeastern's Cold Spray Booth in Brunswick, ME</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/coldspray_sample.JPEG" alt="cold spray sample"
+              style="object-fit: cover; object-position: center bottom;">
+            <div class="carousel-caption">Sample deposition of Tin on CFRP</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/coldspray_tension.JPEG" alt="tension testing"
+              style="object-fit: cover; object-position: bottom center; transform: scale(1.3)">
+            <div class="carousel-caption">Tensile testing of advanced polymer matrix</div>
+          </div>
+          <button class="carousel-btn prev">&#8592;</button>
+          <button class="carousel-btn next">&#8594;</button>
+          <div class="carousel-dots"></div>
         </div>
       </div>
 
-    </div><!-- /timeline-section -->
-
-
-    <!-- ══ 2. BROAD OVERVIEW ══ -->
-    <div class="broad-intro">
-      <div class="broad-img img-hover-wrap">
-        <img src="Images/research_overview.JPEG" alt="In the lab at NASA Langley">
-        <div class="img-hover-caption">Polishing samples at NASA Langley, 2024</div>
-      </div>
-      <div class="broad-text">
-        <p><strong class="broad-lead">I am broadly interested in understanding how aerospace materials behave at the critical interfaces that determine their performance.</strong> Whether its particles impacting a substrate at supersonic speeds, polymers diffusing into one another, or ultrasonic waves probing a material for defects, my work centers on how to predict and control what happens at material interfaces.</p>
-        <p>My PhD research investigates solid-state additive manufacturing through cold spray. My work centers on how processing parameters govern bonding mechanisms and interfacial quality across different material systems. Across all of them, the same underlying mechanisms play out at interfaces that are difficult to observe and hard to predict. Long term, I'm interested in applying data visualization and machine learning to materials characterization by using in-situ sensor data to predict process-structure-property relationships without destructive testing.</p>
-      </div>
-    </div>
-
-
-    <!-- ══ 3. DETAIL SECTIONS ══ -->
-    <div class="rd-divider">
-      <img src="Images/northeastern_logo.png" alt="Northeastern" style="height:5rem;">
-      PhD Research
-    </div>
-
-    <div class="research-detail" id="detail-coldspray">
-      <div class="rd-body">
-        <div class="rd-tag">Cold Spray · Northeastern · 2026–Present</div>
-        <div class="rd-title">Cold Spray Deposition & Interfacial Mechanics</div>
-        <p>Since starting my PhD, I've been investigating cold spray as a platform for depositing functional coatings across a range of material systems, things like metal coatings on carbon fiber composites or metallized polymer structures. The work combines solid-state additive manufacturing, interfacial mechanics, and materials characterization, to work towards an understanding of interfacial bonding mechanisms.</p>
-        <p>Stay tuned for significant research milestones and updates!</p>
+      <div class="rd-divider">
+        <img src="Images/nasa_logo.png" alt="NASA" style="height:4rem;">
+        NASA Langley Research Center
       </div>
 
-      <div class="carousel" id="carousel-coldspray">
-        <div class="carousel-slide active">
-          <img src="Images/coldspray_booth.JPEG" alt="cold spray booth" style="object-fit: cover; object-position: center center">
-          <div class="carousel-caption">Northeastern's Cold Spray Booth in Brunswick, ME</div>
+      <div class="research-detail" id="detail-oatmeal">
+        <div class="rd-body">
+          <div class="rd-tag">OATMEAL Project · NASA Langley · 2025</div>
+          <div class="rd-title">Polymer Diffusion &amp; Laser-Induced Surface Engineering</div>
+          <p>During my third internship at NASA Langley, I was able to lead my own research thrusts. On the OATMEAL
+            (Out-of-autoclave Amorphous/Crystalline Thermoplastic Materials for Energy-Efficient Aerospace-Grade
+            Laminates) project, I ran polymer diffusion experiments using spatial FT-IR spectroscopy to quantify how PEI
+            diffuses into PEEK across different temperatures and times. The process involved heating and quenching
+            polymer films, mounting and polishing cross-sections, then collecting FT-IR data.</p>
+          <p>The other half of my work focused on surface laser ablation. By varying laser power I measured material
+            removal depth using laser confocal topology mapping and mass measurements. Putting this into a Bayesian
+            optimization framework using Gaussian processes enabled cavity depth predictions from laser parameters.</p>
+          <p>Big thanks to Dr. Tyler Hudson, Joseph Kirchhoff, Wil, and Bert for bringing me onto the OATeam!</p>
         </div>
-        <div class="carousel-slide">
-          <img src="Images/coldspray_sample.JPEG" alt="cold spray sample" style="object-fit: cover; object-position: center bottom;">
-          <div class="carousel-caption">Sample deposition of Tin on CFRP</div>
+        <div class="carousel" id="carousel-oatmeal">
+          <div class="carousel-slide active">
+            <img src="Images/oatmeal_ftir.JPEG" alt="oatmeal_ftir" style="object-fit: cover; object-position: 35%;">
+            <div class="carousel-caption">FT-IR ATR Crystal Probing Diffusion Experiments</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/oatmeal_ablation.JPEG" alt="oatmeal ablation"
+              style="object-fit: cover; object-position: center">
+            <div class="carousel-caption">Laser ablation testing on OATMEAL</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/oatmeal_layup.JPEG" alt="oatmeal layup" style="object-fit: cover;">
+            <div class="carousel-caption">Laying up a panel to be tested</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/oatmeal_wil.JPEG" alt="oatmeal wil" style="object-fit: cover; object-position: 85%;">
+            <div class="carousel-caption">Wil giving me some homemade enchiladas</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/oatmeal_cone.JPEG" alt="oatmeal cone" style="object-fit: cover;">
+            <div class="carousel-caption">Joseph and I getting a breakfast ice cream cone on my last day</div>
+          </div>
+          <button class="carousel-btn prev">&#8592;</button>
+          <button class="carousel-btn next">&#8594;</button>
+          <div class="carousel-dots"></div>
         </div>
-        <div class="carousel-slide">
-          <img src="Images/coldspray_tension.JPEG" alt="tension testing" style="object-fit: cover; object-position: bottom center; transform: scale(1.3)">
-          <div class="carousel-caption">Tensile testing of advanced polymer matrix</div>
-        </div>
-        <button class="carousel-btn prev">&#8592;</button>
-        <button class="carousel-btn next">&#8594;</button>
-        <div class="carousel-dots"></div>
-      </div>
-    </div>
-
-    <div class="rd-divider">
-      <img src="Images/nasa_logo.png" alt="NASA" style="height:4rem;">
-      NASA Langley Research Center
-    </div>
-
-    <div class="research-detail" id="detail-oatmeal">
-      <div class="rd-body">
-        <div class="rd-tag">OATMEAL Project · NASA Langley · 2025</div>
-        <div class="rd-title">Polymer Diffusion &amp; Laser-Induced Surface Engineering</div>
-        <p>During my third internship at NASA Langley, I was able to lead my own research thrusts. On the OATMEAL (Out-of-autoclave Amorphous/Crystalline Thermoplastic Materials for Energy-Efficient Aerospace-Grade Laminates) project, I ran polymer diffusion experiments using spatial FT-IR spectroscopy to quantify how PEI diffuses into PEEK across different temperatures and times. The process involved heating and quenching polymer films, mounting and polishing cross-sections, then collecting FT-IR data.</p>
-        <p>The other half of my work focused on surface laser ablation. By varying laser power I measured material removal depth using laser confocal topology mapping and mass measurements. Putting this into a Bayesian optimization framework using Gaussian processes enabled cavity depth predictions from laser parameters.</p>
-        <p>Big thanks to Dr. Tyler Hudson, Joseph Kirchhoff, Wil, and Bert for bringing me onto the OATeam!</p>
-      </div>
-      <div class="carousel" id="carousel-oatmeal">
-        <div class="carousel-slide active">
-          <img src="Images/oatmeal_ftir.JPEG" alt="oatmeal_ftir" style="object-fit: cover; object-position: 35%;">
-          <div class="carousel-caption">FT-IR ATR Crystal Probing Diffusion Experiments</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/oatmeal_ablation.JPEG" alt="oatmeal ablation" style="object-fit: cover; object-position: center">
-          <div class="carousel-caption">Laser ablation testing on OATMEAL</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/oatmeal_layup.JPEG" alt="oatmeal layup" style="object-fit: cover;">
-          <div class="carousel-caption">Laying up a panel to be tested</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/oatmeal_wil.JPEG" alt="oatmeal wil" style="object-fit: cover; object-position: 85%;">
-          <div class="carousel-caption">Wil giving me some homemade enchiladas</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/oatmeal_cone.JPEG" alt="oatmeal cone" style="object-fit: cover;">
-          <div class="carousel-caption">Joseph and I getting a breakfast ice cream cone on my last day</div>
-        </div>
-        <button class="carousel-btn prev">&#8592;</button>
-        <button class="carousel-btn next">&#8594;</button>
-        <div class="carousel-dots"></div>
-      </div>
-    </div>
-
-    <div class="research-detail" id="detail-ttt">
-      <div class="rd-body">
-        <div class="rd-tag">TTT Project · NASA Langley · 2024</div>
-        <div class="rd-title">Composite NDE and Machine Learning</div>
-        <p>My second internship at Langley was on the TTT (Transformational Tools and Technologies) project where I worked on ultrasonic NDE (nondestructive evaluation) on carbon fiber composites. During autoclave cure of bonded composite joints, you don't know what's happening at the bondline. I used in-situ ultrasonic sensors to measure bondline thickness in real time and built MATLAB GUIs for live analysis of the data. The second half of this project was applying machine learning to make these measurements more accurate. This was my first time applying ML to a tangible problem, training SVMs and Gaussian process regression models that improved predictions by 15%. This work resulted in a co-authored paper in <em>Applied Composite Materials</em>.</p>
-        <p>Alongside the bondline work, I also contributed to in-situ ultrasonic analysis of a tow-steered composite panel. I helped correlate ultrasonic C-scans to cure cycle parameters like temperature, pressure, and Tg to monitor defects introduced during AFP (automated fiber placement) layup. Check out this co-authored paper in <em>Journal of Nondestructive Evaluation</em>.</p>
-        <p>Shout out to my mentor Dr. Tyler Hudson, officemate Nick, and Joseph, Wil, and Henry for a great summer research group!</p>
-      </div>
-      <div class="carousel" id="carousel-ttt">
-        <div class="carousel-slide active">
-          <img src="Images/ttt_autoclave.JPEG" alt="TTT autoclave" style="object-fit: cover; object-position: 35%;">
-          <div class="carousel-caption">Autoclave setup for cure + inspection</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/ttt_panel.JPEG" alt="TTT panel" style="object-fit: cover; object-position: left">
-          <div class="carousel-caption">Holding composite panel used for ultrasonic inspection</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/ttt_tyler.JPEG" alt="Summer group w/ Tyler" style="object-fit: cover;">
-          <div class="carousel-caption">Giving Tyler a carbon fiber picture frame we made (L-R Tyler, Nick, myself, Henry)</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/ttt_setup.png" alt="TTT Setup" style="object-fit: contain; ">
-          <div class="carousel-caption">Nick and I setup for in-situ ultrasonic data collection</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/ttt_1267_crew.JPEG" alt="1267 Crew" style="object-fit: cover;">
-          <div class="carousel-caption">The 1267 crew posing in front of the autoclave (L-R Mark, Henry, Nick, Myself, Joseph, Alex)</div>
-        </div>
-        <button class="carousel-btn prev">&#8592;</button>
-        <button class="carousel-btn next">&#8594;</button>
-        <div class="carousel-dots"></div>
-      </div>
-    </div>
-
-    <div class="research-detail" id="detail-sumac">
-      <div class="rd-body">
-        <div class="rd-tag">SUMAC Project · NASA Langley · 2024</div>
-        <div class="rd-title">Sustainable Flax Fiber Thermoplastic Composites</div>
-        <p>During my first internship at NASA Langley, I joined a brand new materials project. SUMAC (Sustainable Manufacturing of AirCraft) was looking to investigate using bio-derived resins and flax fibers for aerospace composite structures. My job was to actually try to demonstrate this idea.</p>
-        <p>I synthesized polyvinyl alcohol (PVA) hydrogels from scratch as a simple resin to test a flax fiber composite. Working with a new material system, a lot of the work was troubleshooting. I iterated through composite layups, tested different processing methods, and machined coupons to run mechanical testing. Trying to figure out why consolidation was failing, why resin was bleeding out, and why specimens weren't behaving as expected was a great intro to composite materials. I also learned thermal testing techniques like TGA and DSC, exposing me to the many characterization possibilities in materials.</p>
-        <p>I'm extremely grateful to Dr. Chris Wohl for his mentorship. It was my first real exposure to materials characterization and composite fabrication, and it set the foundation for everything I've done since.</p>
-      </div>
-      <div class="carousel" id="carousel-sumac">
-        <div class="carousel-slide active">
-          <img src="Images/sumac_first_composite.JPEG" alt="Flax fiber layup" style="object-fit: cover;">
-          <div class="carousel-caption">First flax fiber composite layup!</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/research.JPEG" alt="Standing in lab" style="object-fit: cover; transform: scale(1.5);">
-          <div class="carousel-caption">Standing in my lab with flax composite</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/sumac_pva.JPEG" alt="PVA hydrogel samples" style="object-fit: cover;">
-          <div class="carousel-caption">PVA hydrogel after freeze-thaw cycling and crosslinking</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/sumac_3pt.JPEG" alt="Mechanical testing" style="object-fit: cover; transform: scale(1); object-position: center;">
-          <div class="carousel-caption">Three-point bend testing</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="Images/sumac_lab.JPEG" alt="Polymer lab" style="object-fit: cover; transform: scale(1); object-position: center;">
-          <div class="carousel-caption">My lab at NASA Langley!</div>
-        </div>
-        <button class="carousel-btn prev">&#8592;</button>
-        <button class="carousel-btn next">&#8594;</button>
-        <div class="carousel-dots"></div>
-      </div>
-    </div>
-
-    <div class="rd-divider">
-      <img src="Images/vt_logo.png" alt="Virginia Tech" style="height:5rem;">
-      Undergraduate Research
-    </div>
-
-    <div class="research-detail" id="detail-cubesat">
-      <div class="rd-body">
-        <div class="rd-tag">EMCCD CubeSat · Hume Center for National Security · 2022–2023</div>
-        <div class="rd-title">CubeSat Power Systems</div>
-        <p>My first real taste of research and systems engineering came from the Hume Center for National Security at Virginia Tech. I joined a team led by Dr. Leon Harding working with the Canadian Space Agency designing a 6U CubeSat around a first-of-its-kind Electron Multiplying CCD (EMCCD) payload. An EMCCD is an imaging sensor typically used for ground-based telescopes, not in small sats. I led the design and integration of the power subsystems. Starting from scratch I built out the full power system, iterating through power budgets, running trade studies, and making sure everything would integrate together. I presented the power system design at the Hume Center Colloquium, which was my first time presenting research to an audience beyond my advisors. This experience is really what convinced me I wanted to keep doing research.</p>
-      </div>
-      <div class="rd-img">
-        <img src="Images/cubesat_nuvu.png" alt="nuvu CubeSat">
       </div>
 
+      <div class="research-detail" id="detail-ttt">
+        <div class="rd-body">
+          <div class="rd-tag">TTT Project · NASA Langley · 2024</div>
+          <div class="rd-title">Composite NDE and Machine Learning</div>
+          <p>My second internship at Langley was on the TTT (Transformational Tools and Technologies) project where I
+            worked on ultrasonic NDE (nondestructive evaluation) on carbon fiber composites. During autoclave cure of
+            bonded composite joints, you don't know what's happening at the bondline. I used in-situ ultrasonic sensors
+            to measure bondline thickness in real time and built MATLAB GUIs for live analysis of the data. The second
+            half of this project was applying machine learning to make these measurements more accurate. This was my
+            first time applying ML to a tangible problem, training SVMs and Gaussian process regression models that
+            improved predictions by 15%. This work resulted in a co-authored paper in <em>Applied Composite
+              Materials</em>.</p>
+          <p>Alongside the bondline work, I also contributed to in-situ ultrasonic analysis of a tow-steered composite
+            panel. I helped correlate ultrasonic C-scans to cure cycle parameters like temperature, pressure, and Tg to
+            monitor defects introduced during AFP (automated fiber placement) layup. Check out this co-authored paper in
+            <em>Journal of Nondestructive Evaluation</em>.</p>
+          <p>Shout out to my mentor Dr. Tyler Hudson, officemate Nick, and Joseph, Wil, and Henry for a great summer
+            research group!</p>
+        </div>
+        <div class="carousel" id="carousel-ttt">
+          <div class="carousel-slide active">
+            <img src="Images/ttt_autoclave.JPEG" alt="TTT autoclave" style="object-fit: cover; object-position: 35%;">
+            <div class="carousel-caption">Autoclave setup for cure + inspection</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/ttt_panel.JPEG" alt="TTT panel" style="object-fit: cover; object-position: left">
+            <div class="carousel-caption">Holding composite panel used for ultrasonic inspection</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/ttt_tyler.JPEG" alt="Summer group w/ Tyler" style="object-fit: cover;">
+            <div class="carousel-caption">Giving Tyler a carbon fiber picture frame we made (L-R Tyler, Nick, myself,
+              Henry)</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/ttt_setup.png" alt="TTT Setup" style="object-fit: contain; ">
+            <div class="carousel-caption">Nick and I setup for in-situ ultrasonic data collection</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/ttt_1267_crew.JPEG" alt="1267 Crew" style="object-fit: cover;">
+            <div class="carousel-caption">The 1267 crew posing in front of the autoclave (L-R Mark, Henry, Nick, Myself,
+              Joseph, Alex)</div>
+          </div>
+          <button class="carousel-btn prev">&#8592;</button>
+          <button class="carousel-btn next">&#8594;</button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+
+      <div class="research-detail" id="detail-sumac">
+        <div class="rd-body">
+          <div class="rd-tag">SUMAC Project · NASA Langley · 2024</div>
+          <div class="rd-title">Sustainable Flax Fiber Thermoplastic Composites</div>
+          <p>During my first internship at NASA Langley, I joined a brand new materials project. SUMAC (Sustainable
+            Manufacturing of AirCraft) was looking to investigate using bio-derived resins and flax fibers for aerospace
+            composite structures. My job was to actually try to demonstrate this idea.</p>
+          <p>I synthesized polyvinyl alcohol (PVA) hydrogels from scratch as a simple resin to test a flax fiber
+            composite. Working with a new material system, a lot of the work was troubleshooting. I iterated through
+            composite layups, tested different processing methods, and machined coupons to run mechanical testing.
+            Trying to figure out why consolidation was failing, why resin was bleeding out, and why specimens weren't
+            behaving as expected was a great intro to composite materials. I also learned thermal testing techniques
+            like TGA and DSC, exposing me to the many characterization possibilities in materials.</p>
+          <p>I'm extremely grateful to Dr. Chris Wohl for his mentorship. It was my first real exposure to materials
+            characterization and composite fabrication, and it set the foundation for everything I've done since.</p>
+        </div>
+        <div class="carousel" id="carousel-sumac">
+          <div class="carousel-slide active">
+            <img src="Images/sumac_first_composite.JPEG" alt="Flax fiber layup" style="object-fit: cover;">
+            <div class="carousel-caption">First flax fiber composite layup!</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/research.JPEG" alt="Standing in lab" style="object-fit: cover; transform: scale(1.5);">
+            <div class="carousel-caption">Standing in my lab with flax composite</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/sumac_pva.JPEG" alt="PVA hydrogel samples" style="object-fit: cover;">
+            <div class="carousel-caption">PVA hydrogel after freeze-thaw cycling and crosslinking</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/sumac_3pt.JPEG" alt="Mechanical testing"
+              style="object-fit: cover; transform: scale(1); object-position: center;">
+            <div class="carousel-caption">Three-point bend testing</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="Images/sumac_lab.JPEG" alt="Polymer lab"
+              style="object-fit: cover; transform: scale(1); object-position: center;">
+            <div class="carousel-caption">My lab at NASA Langley!</div>
+          </div>
+          <button class="carousel-btn prev">&#8592;</button>
+          <button class="carousel-btn next">&#8594;</button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+
+      <div class="rd-divider">
+        <img src="Images/vt_logo.png" alt="Virginia Tech" style="height:5rem;">
+        Undergraduate Research
+      </div>
+
+      <div class="research-detail" id="detail-cubesat">
+        <div class="rd-body">
+          <div class="rd-tag">EMCCD CubeSat · Hume Center for National Security · 2022–2023</div>
+          <div class="rd-title">CubeSat Power Systems</div>
+          <p>My first real taste of research and systems engineering came from the Hume Center for National Security at
+            Virginia Tech. I joined a team led by Dr. Leon Harding working with the Canadian Space Agency designing a 6U
+            CubeSat around a first-of-its-kind Electron Multiplying CCD (EMCCD) payload. An EMCCD is an imaging sensor
+            typically used for ground-based telescopes, not in small sats. I led the design and integration of the power
+            subsystems. Starting from scratch I built out the full power system, iterating through power budgets,
+            running trade studies, and making sure everything would integrate together. I presented the power system
+            design at the Hume Center Colloquium, which was my first time presenting research to an audience beyond my
+            advisors. This experience is really what convinced me I wanted to keep doing research.</p>
+        </div>
+        <div class="rd-img">
+          <img src="Images/cubesat_nuvu.png" alt="nuvu CubeSat">
+        </div>
 
 
 
 
-      
-    </div>
-
-    <h2 class="content-heading">Explore</h2>
-    <div class="photo-nav-grid">
-      <a class="photo-nav-item" href="index.html">
-        <img src="Images/CV.JPEG" alt="Home">
-        <div class="photo-nav-label">Home</div>
-      </a>       
-      <a class="photo-nav-item" href="research.html">
-        <img src="Images/research.JPEG" alt="Research">
-        <div class="photo-nav-label">Research</div>
-      </a>
-      <a class="photo-nav-item" href="publications.html">
-        <img src="Images/publications.JPEG" alt="Publications">
-        <div class="photo-nav-label">Publications</div>
-      </a>
-      <a class="photo-nav-item" href="projects.html">
-        <img src="Images/projects.JPEG" alt="Projects">
-        <div class="photo-nav-label">Projects</div>
-      </a>
-      <a class="photo-nav-item" href="adventures.html">
-        <img src="Images/adventures.JPG" alt="Adventures" style="object-position: center 70%;">
-        <div class="photo-nav-label">Adventures</div>
-      </a>
-      <a class="photo-nav-item" href="contact.html">
-        <img src="Images/contact.JPEG" alt="Contact">
-        <div class="photo-nav-label">Contact</div>
-      </a>
-    </div>
 
 
-  </div><!-- /content-wrap -->
-</div><!-- /page-content -->
+      </div>
 
-<footer>
-  <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
-  <span>Last Updated: April 2026</span>
-</footer>
+      <h2 class="content-heading">Explore</h2>
+      <div class="photo-nav-grid">
+        <a class="photo-nav-item" href="index.html">
+          <img src="Images/CV.JPEG" alt="Home">
+          <div class="photo-nav-label">Home</div>
+        </a>
+        <a class="photo-nav-item" href="research.html">
+          <img src="Images/research.JPEG" alt="Research">
+          <div class="photo-nav-label">Research</div>
+        </a>
+        <a class="photo-nav-item" href="publications.html">
+          <img src="Images/publications.JPEG" alt="Publications">
+          <div class="photo-nav-label">Publications</div>
+        </a>
+        <a class="photo-nav-item" href="projects.html">
+          <img src="Images/projects.JPEG" alt="Projects">
+          <div class="photo-nav-label">Projects</div>
+        </a>
+        <a class="photo-nav-item" href="adventures.html">
+          <img src="Images/adventures.JPG" alt="Adventures" style="object-position: center 70%;">
+          <div class="photo-nav-label">Adventures</div>
+        </a>
+        <a class="photo-nav-item" href="contact.html">
+          <img src="Images/contact.JPEG" alt="Contact">
+          <div class="photo-nav-label">Contact</div>
+        </a>
+      </div>
 
-<script>
-  // ── Solid nav on scroll ──
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('solid', window.scrollY > 10);
-  });
 
-  // ── Hamburger toggle ──
-  const toggle   = document.getElementById('nav-toggle');
-  const navLinks = document.getElementById('nav-links');
+    </div><!-- /content-wrap -->
+  </div><!-- /page-content -->
 
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-    if (isOpen) nav.classList.add('solid');
-  });
+  <footer>
+    <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
+    <span>Last Updated: April 2026</span>
+  </footer>
 
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
+  <script>
+    // ── Solid nav on scroll ──
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('solid', window.scrollY > 10);
     });
-  });
 
-  // ── Timeline ──
-  const panels = {
-    coldspray: {
-      tag:     'Cold Spray · Northeastern · 2026-present',
-      title:   'Cold Spray Deposition & Interfacial Mechanics',
-      summary: 'Investigating how solid-state cold spray deposition can create functional metal coatings on composite and polymer substrates.',
-      anchor:  '#detail-coldspray',
-      img:     'Images/coldspray_booth.JPEG'
-    },
-    oatmeal: {
-      tag:     'OATMEAL · NASA Langley · 2025',
-      title:   'Polymer Diffusion & Laser-Induced Surface Engineering',
-      summary: 'Quantified polymer interfacial diffusion and used a Bayesian optimization framework to predict laser ablation cavity depth from processing parameters.',
-      anchor:  '#detail-oatmeal',
-      img:     'Images/oatmeal_ftir.JPEG'
-    },
-    ttt: {
-      tag:     'TTT Project · NASA Langley · 2024',
-      title:   'Machine Learning for Composite Bondline NDE',
-      summary: 'Trained SVM and Gaussian process regression models to improve in-situ ultrasonic bondline thickness predictions during autoclave cure by 15%.',
-      anchor:  '#detail-ttt',
-      img:     'Images/ttt_autoclave.JPEG'
-    },
-    sumac: {
-      tag:     'SUMAC Project · NASA Langley · 2024',
-      title:   'Sustainable Flax Fiber Thermoplastic Composites',
-      summary: 'Investigated flax fiber reinforced thermoplastics for advanced air mobility, synthesizing PVA hydrogels and characterizing thermal and mechanical behavior across processing conditions.',
-      anchor:  '#detail-sumac',
-      img:     'Images/sumac_first_composite.JPEG'
-    },
-    hokiesat: {
-      tag:     'EMCCD CubeSat · Hume Center · 2022–2023',
-      title:   'CubeSat Power Systems — HokieSat IV',
-      summary: 'Led power subsystem design and integration for a 6U CubeSat, building power budgets and trade studies around a first-of-its-kind EMCCD payload.',
-      anchor:  '#detail-cubesat',
-      img:     'Images/cubesat_nuvu.png'
-    },
-  };
+    // ── Hamburger toggle ──
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-  const panel     = document.getElementById('tl-panel');
-  const tagEl     = document.getElementById('tl-tag');
-  const titleEl   = document.getElementById('tl-title');
-  const summaryEl = document.getElementById('tl-summary');
-  const moreEl    = document.getElementById('tl-more');
-  const nodes     = document.querySelectorAll('.tl-node');
-  let activeId    = null;
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+      if (isOpen) nav.classList.add('solid');
+    });
 
-  nodes.forEach(node => {
-    node.addEventListener('click', () => {
-      const id = node.dataset.id;
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
 
-      if (activeId === id) {
+    // ── Timeline ──
+    const panels = {
+      coldspray: {
+        tag: 'Cold Spray · Northeastern · 2026-present',
+        title: 'Cold Spray Deposition & Interfacial Mechanics',
+        summary: 'Investigating how solid-state cold spray deposition can create functional metal coatings on composite and polymer substrates.',
+        anchor: '#detail-coldspray',
+        img: 'Images/coldspray_booth.JPEG'
+      },
+      oatmeal: {
+        tag: 'OATMEAL · NASA Langley · 2025',
+        title: 'Polymer Diffusion & Laser-Induced Surface Engineering',
+        summary: 'Quantified polymer interfacial diffusion and used a Bayesian optimization framework to predict laser ablation cavity depth from processing parameters.',
+        anchor: '#detail-oatmeal',
+        img: 'Images/oatmeal_ftir.JPEG'
+      },
+      ttt: {
+        tag: 'TTT Project · NASA Langley · 2024',
+        title: 'Machine Learning for Composite Bondline NDE',
+        summary: 'Trained SVM and Gaussian process regression models to improve in-situ ultrasonic bondline thickness predictions during autoclave cure by 15%.',
+        anchor: '#detail-ttt',
+        img: 'Images/ttt_autoclave.JPEG'
+      },
+      sumac: {
+        tag: 'SUMAC Project · NASA Langley · 2024',
+        title: 'Sustainable Flax Fiber Thermoplastic Composites',
+        summary: 'Investigated flax fiber reinforced thermoplastics for advanced air mobility, synthesizing PVA hydrogels and characterizing thermal and mechanical behavior across processing conditions.',
+        anchor: '#detail-sumac',
+        img: 'Images/sumac_first_composite.JPEG'
+      },
+      hokiesat: {
+        tag: 'EMCCD CubeSat · Hume Center · 2022–2023',
+        title: 'CubeSat Power Systems — HokieSat IV',
+        summary: 'Led power subsystem design and integration for a 6U CubeSat, building power budgets and trade studies around a first-of-its-kind EMCCD payload.',
+        anchor: '#detail-cubesat',
+        img: 'Images/cubesat_nuvu.png'
+      },
+    };
+
+    const panel = document.getElementById('tl-panel');
+    const tagEl = document.getElementById('tl-tag');
+    const titleEl = document.getElementById('tl-title');
+    const summaryEl = document.getElementById('tl-summary');
+    const moreEl = document.getElementById('tl-more');
+    const nodes = document.querySelectorAll('.tl-node');
+    let activeId = null;
+
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        const id = node.dataset.id;
+
+        if (activeId === id) {
+          panel.classList.remove('visible');
+          node.classList.remove('active');
+          activeId = null;
+          return;
+        }
+
+        nodes.forEach(n => n.classList.remove('active'));
+        node.classList.add('active');
+        activeId = id;
+
+        const d = panels[id];
+        tagEl.textContent = d.tag;
+        titleEl.textContent = d.title;
+        summaryEl.textContent = d.summary;
+        moreEl.href = d.anchor;
+
+        const imgEl = document.querySelector('#tl-panel .tl-panel-img');
+        if (d.img) {
+          imgEl.innerHTML = `<img src="${d.img}" alt="${d.title}" style="width:100%;height:100%;object-fit:cover;display:block;">`;
+        } else {
+          imgEl.innerHTML = `<div class="tl-panel-img-caption">add photo here</div>`;
+        }
+
         panel.classList.remove('visible');
-        node.classList.remove('active');
-        activeId = null;
-        return;
+        void panel.offsetWidth;
+        panel.classList.add('visible');
+      });
+    });
+
+    // ── Carousels ──
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dotsEl = carousel.querySelector('.carousel-dots');
+      let current = 0;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+      });
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dotsEl.children[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dotsEl.children[current].classList.add('active');
       }
 
-      nodes.forEach(n => n.classList.remove('active'));
-      node.classList.add('active');
-      activeId = id;
+      carousel.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
+      carousel.querySelector('.next').addEventListener('click', () => goTo(current + 1));
 
-      const d = panels[id];
-      tagEl.textContent     = d.tag;
-      titleEl.textContent   = d.title;
-      summaryEl.textContent = d.summary;
-      moreEl.href           = d.anchor;
-
-      const imgEl = document.querySelector('#tl-panel .tl-panel-img');
-      if (d.img) {
-        imgEl.innerHTML = `<img src="${d.img}" alt="${d.title}" style="width:100%;height:100%;object-fit:cover;display:block;">`;
-      } else {
-        imgEl.innerHTML = `<div class="tl-panel-img-caption">add photo here</div>`;
-      }
-
-      panel.classList.remove('visible');
-      void panel.offsetWidth;
-      panel.classList.add('visible');
+      // Swipe support for mobile
+      let touchStartX = 0;
+      carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      carousel.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      });
     });
-  });
-
-  // ── Carousels ──
-  document.querySelectorAll('.carousel').forEach(carousel => {
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const dotsEl = carousel.querySelector('.carousel-dots');
-    let current = 0;
-
-    slides.forEach((_, i) => {
-      const dot = document.createElement('div');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.addEventListener('click', () => goTo(i));
-      dotsEl.appendChild(dot);
-    });
-
-    function goTo(n) {
-      slides[current].classList.remove('active');
-      dotsEl.children[current].classList.remove('active');
-      current = (n + slides.length) % slides.length;
-      slides[current].classList.add('active');
-      dotsEl.children[current].classList.add('active');
-    }
-
-    carousel.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
-    carousel.querySelector('.next').addEventListener('click', () => goTo(current + 1));
-
-    // Swipe support for mobile
-    let touchStartX = 0;
-    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    carousel.addEventListener('touchend', e => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
-    });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
