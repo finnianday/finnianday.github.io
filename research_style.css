@@ -397,7 +397,7 @@
 }
 .rd-results-label {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.62rem;
+  font-size: 0.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -405,7 +405,7 @@
 }
 .rd-result-item {
   font-family: 'EB Garamond', serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--ink);
   line-height: 1.7;
 }
@@ -616,7 +616,7 @@
   .tl-year, .tl-label { font-size: 0.52rem; }
 
   .rd-divider { font-size: 1.1rem; }
-  .rd-divider img { height: 2.25rem !important; }
+  .rd-divider img { height: 4rem !important; }
 
   .carousel,
   #carousel-coldspray {
@@ -624,4 +624,28 @@
   }
 
   .broad-img { height: 200px; }
+}
+
+
+/* hidden on desktop — only show inline images on mobile */
+.mobile-inline-img {
+  display: none;
+  overflow: hidden;
+  border-radius: 3px;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 680px) {
+  .mobile-inline-img {
+    display: block;
+  }
+
+  /* hide the full image column on mobile since inline ones replace it */
+  .project-grid > div:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .desktop-only { display: none; }
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Finnian Day</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="research_style.css">
   <script src="analytics.js"></script>
 </head>
 <body>
@@ -22,43 +23,263 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="projects.html">Projects</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
     <li><a href="adventures.html">Adventures</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <div class="hero">
-  <img class="hero-img" src="Images/banner.jpg" alt="" style="object-position: center 45%;">
+  <img class="hero-img" src="Images/projects_banner.JPEG" alt="" style="object-position: center 50%;">
   <div class="hero-overlay"></div>
   <div class="hero-text">
     <div class="hero-name">Projects</div>
-    <div class="hero-tagline">Finnian Day · Northeastern University</div>
+    <div class="hero-tagline">3D Printing · Personal Projects · For Fun</div>
   </div>
 </div>
 
 <div class="page-content">
-  <div class="content-wrap" style="min-height: 40vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; padding-top: 5rem; padding-bottom: 5rem;">
+  <div class="content-wrap">
 
-    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);">Under Construction</div>
+    <!-- ══ DETAIL SECTIONS ══ -->
 
-    <h2 style="font-family: 'EB Garamond', serif; font-size: 2.5rem; font-weight: 400; color: var(--ink); line-height: 1.1;">Working on it.</h2>
+    <div class="rd-divider">
+      <img src="Images/3DPAC_Logo.png" alt="NASA" style="height:8rem; filter: invert(1);">
+      3D Printed Aircraft Competition
+    </div>
 
-    <p style="font-family: 'EB Garamond', serif; font-size: 1.2rem; color: var(--ink-2); max-width: 480px; line-height: 1.7;">
-      This page is coming soon. Check back later.
-    </p>
+    <!-- ══ 3DPAC ══ -->
+    <div class="research-detail" id="detail-3dp" style="display:block;">
+      <div class="project-grid">
+      <div class="rd-body" style="max-width:100%;">
+
+        <!-- The Competition -->
+        <div class="sub-section">
+
+          <h2>The Competition</h2>
+          <p>
+            During my time my Tech, I spent three years on the 3D Printed Aircraft Competition (3DPAC) team. 3DPAC competes at the national competition hosted by UT Arlington every year. The competition is simple: design an aircraft and 3D print every piece of it. Having a strong foundation in 3D printing and interest in aerodynamics, it was a no brainer to join the team.
+          </p>
+
+          <div class="rd-results-label">Competition Results</div>
+          <div class="rd-result-item">🏆 Most Innovative Design: <b>Big Stepper</b> — 2025</div>
+          <div class="rd-result-item">🥈 2nd Place Overall: <b>Wavy</b> — 2023</div>
+          <div class="rd-result-item">🏆 Most Innovative Design: <b>Blended</b> — 2023</div>
+
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+           <img src="Images/comp_2025.JPEG" alt="comp 2025" style="width:100%; height:100%; object-fit:cover;">
+           <div class="img-hover-caption">Our team at the 2025 competition, UT Arlington</div>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+           <img src="Images/big_stepper_win.JPEG" alt="stepper win 2025" style="width:100%; height:300px; object-fit:cover;">
+           <div class="img-hover-caption">Big Stepper wins Most Innovative Design, 2025 (myself, Shyaam and Ethan accepting award)</div>
+        </div>
 
 
+        <!-- Wavy -->
+        <div class="sub-section">
+          <div class="section-label">Section 01: 2022 - 2023</div>
+          <h2>Wavy</h2>
+          <p>
+            My first year on the team, I worked on <em>Wavy</em>, a fixed-wing aircraft with a hybrid-style design. My main contributions were remodeling and printing the V-tail boom and designing the wing's internal load-bearing structure. This was my first time touching every part of the design process end-to-end, from aerodynamic design, to CAD, to printing, and test flights. It gave me a strong sense of everything that goes into a 3D printed aircraft.
+          </p>
+          <p>
+            Wavy sparked what became a long-term obsession with V-tail configurations. There's just something fun about the challenge of hybrid control surfaces (like <a href="https://ultralightdesign.wordpress.com/2017/11/28/to-v-or-not-to-v/" target="_blank">ruddervators</a>). More on this obsession below.
+          </p>
+          <p>
+            After getting stranded in the Atlanta airport and sleeping in the terminal, I barely made it to Arlington in time for comp. It was completely worth it though. Wavy placed 2nd in the fixed-wing category, and our other aircraft, Blended, took home the Most Innovative Design award.
+          </p>
+          <p>
+            Shout out to Jay, Andrew, Colby, and Karin!!
+          </p>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/wavy.JPEG" style="width:100%; height:220px; object-fit:cover; object-position: center bottom;">
+          <div class="img-hover-caption">Wavy being assembled, 2023</div>
+        </div>
+
+        <!-- Big Stepper -->
+        <div class="sub-section">
+          <div class="section-label">Section 02: 2024 - 2025</div>
+          <h2>Big Stepper</h2>
+          <p>
+            By 2024, I became the Printing &amp; Manufacturing Lead and a lead for one of our three competition aircraft, <em>Big Stepper</em>. This was a big redemption year for 3DPAC after walking away empty handed at comp in 2024. This year, my team decided to go all-in on something new: a custom stepped airfoil that our team designed completely from scratch. Our design was validated through CFD, wind tunnel testing, and flight tests. Our final airfoil design generated 40% less drag than the equivalent "unstepped" airfoil. 
+          </p>
+          <p>
+            On top of the stepped wing, we also decided to take another stab at the V-tail concept. I was stoked to be trying this again. We iterated through many different designs, eventually getting to a super lightweight and controllable version of our stepped wing, V-tail aircraft.
+          </p>
+          <p>
+            We took no chances travelling this year, and instead of flying down to comp, 6 of us packed into a 12-person van and drove from VA to TX with 9 planes, spare parts, and a 3D printer loaded in the back. Despite the brutal drive, we had an awesome week in Arlington, and the best part, Big Stepper walked away with the Most Innovative Design award. This was honestly one of my proudest accomplishments during undergrad.
+          </p>
+          <p>
+            I'm super grateful to have led such an amazing team on Big Stepper!! Shout out to Shyaam, Ethan, Artemis, and Daniel. You guys rock.
+          </p>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/big_stepper_cfd.png" alt="stepper cfd" style="width:100%; height:100%; object-fit:cover;">
+          <div class="img-hover-caption">CFD analysis of the custom stepped airfoil</div>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/big_stepper_tunnel.jpg" alt="stepper tunnel" style="width:100%; height:100%; object-fit:cover;">
+          <div class="img-hover-caption">Wind tunnel validation of the stepped airfoil</div>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/big_stepper_cad.png" alt="stepper cad" style="width:100%; height:100%; object-fit:cover;">
+          <div class="img-hover-caption">Big Stepper CAD model</div>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/big_stepper_test.JPEG" alt="stepper test" style="width:100%; height:350px; object-fit:cover;">
+          <div class="img-hover-caption">Flight testing Big Stepper with Shyaam, 2025</div>
+        </div>
+
+
+        <!-- P&M -->
+        <div class="sub-section">
+          <div class="section-label">Section 03: Manufacturing</div>
+          <h2>Printing &amp; Manufacturing</h2>
+          <p>
+            Being a lead on 3DPAC was an extremely rewarding experience. As the Print &amp; Manufacturing Lead, I owned everything to do with the printers and building the aircraft. From scheduling, slicer settings, part iterations, and manufacturing problems across every plane. At its peak, the team had 9 aircraft in production at the same time, with different materials, requirements, and deadlines.
+          </p>
+          <p>
+            It wouldn't have been possible without my P&amp;M co-lead Tom, who would tackle all these problems with me head on. Late nights diagnosing and fixing printers created an awesome friendship. Tom and I transformed a messy, dysfunctional lab into an environment we were actually proud of, built completely around 7 different printers.
+          </p>
+          <p>
+            The most rewarding part about being a lead was mentoring members and watching them grow into their roles. Seeing them get excited about their own ideas and test them out was awesome. Huge shout out to my co-leads Tom, Anthony, and Seth for reviving 3DPAC with me.
+          </p>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/big_stepper_assembled.png" style="width:100%; height:100%; object-fit:cover; object-position: center bottom;">
+          <div class="img-hover-caption">Big Stepper fully assembled before comp, 2025</div>
+        </div>
+
+      </div>
+
+<div style="display:flex; flex-direction:column; gap:0.75rem;">
+
+  <!-- good -->
+  <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/comp_2025.JPEG" alt="comp 2025" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">Our team at the 2025 competition, UT Arlington</div>
   </div>
 
-  <div class="content-wrap">
-    <hr class="content-rule">
+  <!-- good -->
+  <div style="overflow:hidden; height:250px; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/wavy.JPEG" alt="wavy" style="width:100%; height:100%; object-fit:cover; object-position: center bottom;">
+    <div class="img-hover-caption">Wavy being assembled, 2023</div>
+  </div>
+
+  <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/big_stepper_cfd.png" alt="stepper cfd" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">CFD analysis of the custom stepped airfoil</div>
+  </div>
+
+  <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/big_stepper_tunnel.jpg" alt="stepper tunnel" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">Wind tunnel validation of the stepped airfoil</div>
+  </div>
+
+  <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/big_stepper_cad.png" alt="stepper cad" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">Big Stepper CAD model</div>
+  </div>
+
+  <!-- good -->
+  <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/big_stepper_assembled.png" alt="stepper assembled" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">Big Stepper fully assembled before comp, 2025</div>
+  </div>
+
+  <div style="overflow:hidden; height:400px; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/big_stepper_test.JPEG" alt="stepper test" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">Flight testing Big Stepper with Shyaam, 2025</div>
+  </div>
+
+  <!-- good -->
+  <div style="overflow:hidden; height:450px; width:100%;" class="img-hover-wrap desktop-only">
+    <img src="Images/big_stepper_win.JPEG" alt="stepper win" style="width:100%; height:100%; object-fit:cover;">
+    <div class="img-hover-caption">Big Stepper wins Most Innovative Design, 2025 (myself, Shyaam and Ethan accepting award)</div>
+  </div>
+
+</div>
+      </div><!-- /inner grid -->
+
+    </div>
+    <!-- ══ RASC-AL ══ -->
+    <div class="rd-divider">
+      <img src="Images/red_dawn_logo.png" alt="NASA" style="height:6rem;">
+      NASA RASC-AL · Senior Capstone
+    </div>
+
+<div class="research-detail" id="detail-rascal" style="display:block;">
+      <div class="project-grid reverse">
+      <div class="rd-body" style="max-width:100%;">
+
+        <div class="sub-section">
+          <div class="section-label">Section 01: The Project</div>
+          <h2>Project Red Dawn</h2>
+          <p>
+            For my senior capstone, I served as Structures Lead for Virginia Tech's entry in the NASA RASC-AL competition under the theme "Advanced Science Missions and Technology Demonstrators for Human-Mars Precursor Campaign." Our team, Project Red Dawn, designed an Expandable Superconducting Magnetic Radiation Shielding (ESMRS) system: a deployable array of superconducting coils that generate a magnetic field strong enough to deflect radiation particles.
+          </p>
+          <p>
+            The core of the system is four coils. Once deployed on the Martian surface via scissor lifts, the coils expand under magnetic pressure to create a safe zone for crew and electronics. The whole system is sized to fit inside a SpaceX Starship payload bay and autonomously deploy after landing.
+          </p>
+        </div>
+
+        <div class="mobile-inline-img img-hover-wrap">
+          <img src="Images/esmrs_concept.png" alt="Martian habitat concept render" style="width:100%; height:100%; object-fit:cover;">
+          <div class="img-hover-caption">fully deployed ESMRS concept rendering</div>
+        </div>
+
+        <div class="sub-section">
+          <div class="section-label">Section 02: My Role</div>
+          <h2>Structures Lead</h2>
+          <p>
+            My job was to oversee the design and validation of the structures that hold this whole thing together, primarily the <em>strongback</em> (a load-bearing carbon fiber backbone inside each coil). The strongback has to survive both the loads from the Starship launch, as well as the magnetic forces during operation. The magnetic loads are actually the dominant design requirements because they were so strong.
+          </p>
+          <p>
+            We ran static and dynamic FEA simulations, including frequency analyses to check for vibrational issues during launch. I also validated the scissor lift structures that elevate each coil to its operational height of up to 9 m once deployed. Beyond the structures work, I was involved in the systems-level design process to make sure every subsystem complied to our requirements.
+          </p>
+          <p>
+            Huge shout out to my team for bringing me into the group: Al, Josh, Ally, Olivia, Wheat, Nick, Connor, Erik, Celia, Jayden, and Pramil.
+          </p>
+        </div>
+
+      </div>
+
+<div style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap desktop-only">
+          <img src="Images/esmrs_concept.png" alt="Martian habitat concept render" style="width:100%; height:100%; object-fit:cover;">
+          <div class="img-hover-caption">fully deployed ESMRS concept rendering</div>
+        </div>
+        <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap">
+          <img src="Images/esmrs_launch_loading.png" alt="FEA stress distribution on support structure" style="width:100%; height:100%; object-fit:cover;">
+          <div class="img-hover-caption">Launch loading frequency analysis of the ESMRS strongback</div>
+        </div>
+        <div style="overflow:hidden; height:100%; width:100%;" class="img-hover-wrap">
+          <img src="Images/esmrs_team.JPEG" alt="Senior design team at final presentation" style="width:100%; height:100%; object-fit:cover; object-position: center 70%;">
+          <div class="img-hover-caption">Red Dawn team with advisor Dr. Shinpaugh after our final presentation, 2025</div>
+        </div>
+</div>
+      </div><!-- /project-grid -->
+    </div>
+
+
+    <!-- ══ EXPLORE GRID ══ -->
     <h2 class="content-heading">Explore</h2>
     <div class="photo-nav-grid">
       <a class="photo-nav-item" href="index.html">
         <img src="Images/CV.JPEG" alt="Home">
         <div class="photo-nav-label">Home</div>
-      </a>       
+      </a>
       <a class="photo-nav-item" href="research.html">
         <img src="Images/research.JPEG" alt="Research">
         <div class="photo-nav-label">Research</div>
@@ -80,8 +301,9 @@
         <div class="photo-nav-label">Contact</div>
       </a>
     </div>
-  </div>
-</div>
+
+  </div><!-- /content-wrap -->
+</div><!-- /page-content -->
 
 <footer>
   <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
@@ -89,6 +311,7 @@
 </footer>
 
 <script>
+  // ── Solid nav on scroll ──
   const nav = document.getElementById('main-nav');
   const hero = document.querySelector('.hero');
   const observer = new IntersectionObserver(
@@ -97,14 +320,17 @@
   );
   observer.observe(hero);
 
-  const toggle = document.getElementById('nav-toggle');
+  // ── Hamburger toggle ──
+  const toggle   = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
+
   toggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', isOpen);
     if (isOpen) nav.classList.add('solid');
   });
+
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -112,6 +338,8 @@
       toggle.setAttribute('aria-expanded', false);
     });
   });
+
+
 </script>
 
 </body>
