@@ -185,6 +185,12 @@ nav.solid .nav-links a.active { color: var(--accent); }
   padding: 3rem clamp(1.5rem, 5vw, 3rem);
 }
 
+/* Shared page ending (partials/site-end.html). The section above it already
+   ends with a content-wrap's bottom padding, so drop this wrap's top padding
+   and the rule's top margin instead of stacking all three. */
+.content-wrap.site-end { padding-top: 0; }
+.content-wrap.site-end .content-rule { margin-top: 0; }
+
 .intro-heading {
   font-family: 'EB Garamond', serif;
   font-size: 3rem;

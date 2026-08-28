@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications — Finnian Day</title>
+  <link rel="icon" href="Icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="Icons/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="publications_style.css">
   <script src="analytics.js"></script>
@@ -174,70 +178,12 @@
 
     </div><!-- /content-wrap -->
 
-    <!-- EXPLORE GRID -->
-    <div class="content-wrap">
-      <hr class="content-rule">
-      <h2 class="content-heading">Explore</h2>
-      <div class="photo-nav-grid">
-        <a class="photo-nav-item" href="index.html">
-          <img src="Images/CV.JPEG" alt="Home">
-          <div class="photo-nav-label">Home</div>
-        </a>
-        <a class="photo-nav-item" href="research.html">
-          <img src="Images/research.JPEG" alt="Research">
-          <div class="photo-nav-label">Research</div>
-        </a>
-        <a class="photo-nav-item" href="publications.html">
-          <img src="Images/publications.JPEG" alt="Publications">
-          <div class="photo-nav-label">Publications</div>
-        </a>
-        <a class="photo-nav-item" href="projects.html">
-          <img src="Images/projects.JPEG" alt="Projects">
-          <div class="photo-nav-label">Projects</div>
-        </a>
-        <a class="photo-nav-item" href="adventures.html">
-          <img src="Images/adventures.JPG" alt="Adventures" style="object-position: center 70%;">
-          <div class="photo-nav-label">Adventures</div>
-        </a>
-        <a class="photo-nav-item" href="contact.html">
-          <img src="Images/contact.JPEG" alt="Contact">
-          <div class="photo-nav-label">Contact</div>
-        </a>
-      </div>
-    </div>
 
   </div><!-- /page-content -->
 
-  <footer>
-    <span>© 2026 Finnian P. Day · Portland, ME · Northeastern University</span>
-    <span>Last Updated: April 2026</span>
-  </footer>
+  <div data-include="partials/site-end.html"></div>
 
-  <script>
-    const nav = document.getElementById('main-nav');
-    const hero = document.querySelector('.hero');
-    const observer = new IntersectionObserver(
-      ([entry]) => nav.classList.toggle('solid', !entry.isIntersecting),
-      { threshold: 0 }
-    );
-    observer.observe(hero);
-
-    const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      toggle.classList.toggle('open', isOpen);
-      toggle.setAttribute('aria-expanded', isOpen);
-      if (isOpen) nav.classList.add('solid');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', false);
-      });
-    });
-  </script>
+  <script src="site.js"></script>
 
 </body>
 
